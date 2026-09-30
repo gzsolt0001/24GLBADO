@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<WebUIModel adoev="2024" csempeMod="MENU" id="24GLBADO" info="Bevallás a 2024. évi kiegészítő adókról és az elismert belföldi kiegészítőadó-előlegről a Magyarországon illetőséggel rendelkező adóalanyok részére / Tax return on the qualified minimum domestic top-up tax advance payment of FY2024 for domestic constituent entites or for the designated local entity acting on behalf of the domestic constituent entities" mainDocumentId="24GLBADO" major="6" minor="0" mukodesiMod="NORMAL" name="24GLBADO" templateType="single" tipus="BEVALLAS" webDefaultLength="4" webInfo="Bevallás a 2024. évi kiegészítő adókról és az elismert belföldi kiegészítőadó-előlegről a Magyarországon illetőséggel rendelkező adóalanyok részére / Tax return on the qualified minimum domestic top-up tax advance payment of FY2024 for domestic constituent entites or for the designated local entity acting on behalf of the domestic constituent entities" webName="24GLBADO" webOnell="false">
+<WebUIModel adoev="2024" csempeMod="MENU" id="24GLBADO" info="Bevallás a 2024. évi kiegészítő adókról és az elismert belföldi kiegészítőadó-előlegről a Magyarországon illetőséggel rendelkező adóalanyok részére / Tax return on the qualified minimum domestic top-up tax advance payment of FY2024 for domestic constituent entites or for the designated local entity acting on behalf of the domestic constituent entities" mainDocumentId="24GLBADO" major="8" minor="0" mukodesiMod="NORMAL" name="24GLBADO" templateType="single" tipus="BEVALLAS" webDefaultLength="4" webInfo="Bevallás a 2024. évi kiegészítő adókról és az elismert belföldi kiegészítőadó-előlegről a Magyarországon illetőséggel rendelkező adóalanyok részére / Tax return on the qualified minimum domestic top-up tax advance payment of FY2024 for domestic constituent entites or for the designated local entity acting on behalf of the domestic constituent entities" webName="24GLBADO" webOnell="false">
     <Form id="24GLBADO" name="24GLBADO" webDefaultLength="4" webInfo="Bevallás a 2024. évi kiegészítő adókról és az elismert belföldi kiegészítőadó-előlegről a Magyarországon illetőséggel rendelkező adóalanyok részére / Tax return on the qualified minimum domestic top-up tax advance payment of FY2024 for domestic constituent entites or for the designated local entity acting on behalf of the domestic constituent entities" webName="24GLBADO">
         <Assistant id="120167" name="Azonosító adatok / Identification data" pos="1" webHelp="E_120167.html">
             <FieldGroupId>120052</FieldGroupId>
@@ -159,7 +159,7 @@
         <DynamicStructure id="120092" maxCount="5994">
             <PartIndex fgId="120092" index="0"/>
         </DynamicStructure>
-        <DynamicStructure id="120127" maxCount="20">
+        <DynamicStructure id="120127" maxCount="9999">
             <PartIndex fgId="120127" index="0"/>
         </DynamicStructure>
         <DynamicStructure id="120116" maxCount="999">
@@ -1225,7 +1225,7 @@
                 <Field id="0IXXXXC50480A" label="Alcsoport megnevezése / Subgroup name" labelPosition="TOP" mandatory="false" readonly="false" searcher="false" type="TEXT" vid="[ELSZ_T]A2" webLength="12" wId="FG44_V3_F1" calculated="false" default="false" irids="3" mask="########-#-##" maxLength="13" metaType="1"/>
             </Layout>
         </FieldGroup>
-        <FieldGroup chainId="120263" chainView="HORIZONTAL" clientSdgId="120299" defaultGroup="false" index="-1" maxCount="20" nextId="120127" sdgId="120299" sdgRole="DETAIL" toggleSwitch="false" type="DYNAMIC" webHelp="G_120127.html" fgroupType="NORMAL" id="120127" name="[QDMTT-ELSZ-T] Csoporttagra vonatkozó további adatok / Additional data for the constituent entity" wId="FG45">
+        <FieldGroup chainId="120263" chainView="HORIZONTAL" clientSdgId="120299" defaultGroup="false" index="-1" maxCount="9999" nextId="120127" sdgId="120299" sdgRole="DETAIL" toggleSwitch="false" type="DYNAMIC" webHelp="G_120127.html" fgroupType="NORMAL" id="120127" name="[QDMTT-ELSZ-T] Csoporttagra vonatkozó további adatok / Additional data for the constituent entity" wId="FG45">
             <Fid>0IXXXXD50493A</Fid>
             <Fid>0IXXXXD50490A</Fid>
             <Fid>30075</Fid>
@@ -2032,78 +2032,62 @@
             <Msg>Az "[NY-1] Nyilatkozatok" mezőcsoportban 02. mező akkor tölthető ki, ha [NY-1] 01. mező = 3! (Hibakód=&lt;M081&gt;)</Msg>
         </Message>
         <Message id="9" msgLevel="warning">
-            <CalcId>18655</CalcId>
-            <Msg>Az [ELSZ-CS] menüpontban a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező akkor tölthető ki, ha az "Alcsoport megnevezése" mező üres! (Hibakód=&lt;M231&gt;)</Msg>
-        </Message>
-        <Message id="10" msgLevel="warning">
-            <CalcId>18656</CalcId>
-            <Msg>Az [ELSZ-CS] menüpontban az "Alcsoport megnevezése" mező akkor tölthető ki, ha a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező üres! (Hibakód=&lt;M230&gt;)</Msg>
-        </Message>
-        <Message id="11" msgLevel="warning">
-            <CalcId>18768</CalcId>
-            <Msg>Az [ELSZ-T] menüpontban az "Alcsoport megnevezése" mező akkor tölthető ki, ha a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező üres! (Hibakód=&lt;M237&gt;)</Msg>
-        </Message>
-        <Message id="12" msgLevel="warning">
-            <CalcId>18769</CalcId>
-            <Msg>Az [ELSZ-T] menüpontban a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező akkor tölthető ki, ha az "Alcsoport megnevezése" mező üres! (Hibakód=&lt;M238&gt;)</Msg>
-        </Message>
-        <Message id="13" msgLevel="warning">
             <CalcId>18542</CalcId>
             <CalcId>18442</CalcId>
             <CalcId>18444</CalcId>
             <Msg>A "Pénznem egységes választása" mezőcsoport akkor tölthető ki, ha a "Bevallás benyújtója" mező = 2. (Hibakód=&lt;M025&gt;)</Msg>
         </Message>
-        <Message id="14" msgLevel="error">
+        <Message id="10" msgLevel="error">
             <CalcId>18254</CalcId>
             <Msg>Kikapcsolt állapotban van a Számított mezők kezelése funkció!  A program helyes működéséhez kérjük, hogy kapcsolja be a bal oldalon található menüsor "Kitöltő beállításai" &gt; "Dokumentum szintű beállítások"" &gt; "A program kezelje a számított mezőket"" funkciót. (Hibakód=&lt;M012&gt;)</Msg>
         </Message>
-        <Message id="15" msgLevel="error">
+        <Message id="11" msgLevel="error">
             <CalcId>18731</CalcId>
             <Msg>[ANYA] Az [ANYA] menüpontban akkor lehet újabb mezőcsopotot hozzáadni, ha az előtte lévő mezőcsopotok mindegyike kitöltött! (Hibakód=&lt;M092&gt;)</Msg>
         </Message>
-        <Message id="16" msgLevel="error">
+        <Message id="12" msgLevel="error">
             <CalcId>18733</CalcId>
             <Msg>[NY-2] Az [NY-2] menüpontban akkor lehet újabb mezőcsopotot hozzáadni, ha az előtte lévő mezőcsopotok mindegyike kitöltött! (Hibakód=&lt;M087&gt;)</Msg>
         </Message>
-        <Message id="17" msgLevel="error">
+        <Message id="13" msgLevel="error">
             <CalcId>18729</CalcId>
             <Msg>[ELO] Az [ELO] menüpontban akkor lehet újabb mezőcsopotot hozzáadni, ha az előtte lévő mezőcsopotok mindegyike kitöltött! (Hibakód=&lt;M138&gt;)</Msg>
         </Message>
-        <Message id="18" msgLevel="error">
+        <Message id="14" msgLevel="error">
             <CalcId>18430</CalcId>
             <Msg>Az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban korábban már feltüntetésre került a "Csoporttag adszáma"! (Hibakód=&lt;M129&gt;)</Msg>
         </Message>
-        <Message id="19" msgLevel="error">
+        <Message id="15" msgLevel="error">
             <CalcId>18431</CalcId>
             <Msg>Az [Azonosító adatok] menüpont "Végső anyavállalat(ok) adatai" mezőcsoportjában korábban már feltüntetésre került a "Végső anyavállalat adószáma"! (Hibakód=&lt;M023&gt;)</Msg>
         </Message>
-        <Message id="20" msgLevel="error">
+        <Message id="16" msgLevel="error">
             <CalcId>18705</CalcId>
             <Msg>Az [NY-2] menüpont "Kizárt szervezet adatai" mezőcsoportjában korábban már feltüntetésre került a Kizárt szervezet "Adószáma"! (Hibakód=&lt;M090&gt;)</Msg>
         </Message>
-        <Message id="21" msgLevel="error">
+        <Message id="17" msgLevel="error">
             <CalcId>18439</CalcId>
             <Msg>Az [Azonosító adatok] menüpont "Végső anyavállalat(ok) adatai" mezőcsoportjában korábban már feltüntetésre került a "Végső anyavállalat neve"! (Hibakód=&lt;M024&gt;)</Msg>
         </Message>
-        <Message id="22" msgLevel="error">
+        <Message id="18" msgLevel="error">
             <CalcId>18607</CalcId>
             <Msg>Az [ELSZ-CS] menüpont "Alcsoport megnevezése" mezőjében feltüntetett érték nem egyezhet a korábban már kitöltött másik "Alcsoport megnevezése" mező értékével! (Hibakód=&lt;M233&gt;)</Msg>
         </Message>
-        <Message id="23" msgLevel="error">
+        <Message id="19" msgLevel="error">
             <CalcId>18618</CalcId>
             <Msg>Akkor lehet az [ELSZ-CS] menüpontban a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező kitölteni, HA  nincs olyan [ELSZ-CS] menüpont, ahol a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező már kitöltött. (Hibakód=&lt;M224&gt;)</Msg>
         </Message>
-        <Message id="24" msgLevel="error">
+        <Message id="20" msgLevel="error">
             <CalcId>18405</CalcId>
             <Msg>[Nyomtatvány] A bevallás jellege mező értéke O (önellenőrzés), H (helyesbítés) vagy üres lehet.  (Hibakód=&lt;1059729/o009&gt;)</Msg>
         </Message>
-        <Message id="25" msgLevel="error">
+        <Message id="21" msgLevel="error">
             <CalcId>100001</CalcId>
             <CalcId>100002</CalcId>
             <CalcId>100003</CalcId>
             <Msg>[Nyomtatvány] Verziokontroll=1</Msg>
         </Message>
-        <Message id="26" msgLevel="error">
+        <Message id="22" msgLevel="error">
             <CalcId>18419</CalcId>
             <CalcId>18420</CalcId>
             <CalcId>18420</CalcId>
@@ -2115,41 +2099,41 @@
             <CalcId>18760</CalcId>
             <Msg>Hibás a beírt adószám!  Az adószám formai felépítése: - 11 karakter hosszú,. - Az első jegyének lehetséges értékei: 1, 2, 3, 4, 5, 6, 7 vagy 9. - Az áfakód (adószám 9. karaktere) lehetséges értékei: 1, 2, 4 vagy 9.  - A megyekód (adószám 10. és 11. karaktere) lehetséges értéke: (1 &lt; megyekód &lt; 45 , de nem lehet 21) vagy 51. (Hibakód=&lt;M008&gt;)</Msg>
         </Message>
-        <Message id="27" msgLevel="error">
+        <Message id="23" msgLevel="error">
             <CalcId>18424</CalcId>
             <CalcId>18263</CalcId>
             <Msg>Az [Azonosító adatok] menüpontban az "Adózó adószáma" mező és az "Adózó neve" mező kitöltése kötelező! (Hibakód=&lt;M017&gt;)</Msg>
         </Message>
-        <Message id="28" msgLevel="error">
+        <Message id="24" msgLevel="error">
             <CalcId>94</CalcId>
             <Msg>Az Ön által feltüntetett adószám hibás. / Csoportos áfa (áfa kód = 5), illetve csoportos társasági adó alanyok (áfa kód=6) ezt a bizonylatot nem nyújthatják be. (Hibakód=&lt;1061567/a003&gt;)</Msg>
         </Message>
-        <Message id="29" msgLevel="error">
+        <Message id="25" msgLevel="error">
             <CalcId>86</CalcId>
             <Msg>Helytelen az Azonosító adatok Menüpontban a Bevallás jellemzői között található "Hibásnak minősített bevallás vonalkódja" mező értéke. (Hibakód=&lt;M003&gt;)</Msg>
         </Message>
-        <Message id="30" msgLevel="warning">
+        <Message id="26" msgLevel="warning">
             <CalcId>87</CalcId>
             <Msg>Figyelem! Az Azonosító adatok Menüpontban a Bevallás jellemzői között csak akkor tölthető ki a "Hibásnak minősített bevallás vonalkódja" mező, ha az előzőleg elektronikus úton, azonos időszakra benyújtott bevallása hibás, melyről Ön az adóhatóságtól kiértesítő levelet kapott, és azt a hibát kívánja javítani jelen bevallással. A kiértesítő levél ""Bevallás vonalkód"" rovatából a bizonylattípus után megadott 10 jegyű számsort (a javítandó bevallás vonalkódját) itt kell feltüntetni.  (Hibakód=&lt;M002&gt;)</Msg>
         </Message>
-        <Message id="31" msgLevel="error">
+        <Message id="27" msgLevel="error">
             <CalcId>18354</CalcId>
             <Msg>Az [Azonosító adatok] menüpontban az ""Adózó adószáma"" mező és a ""Jogelőd adószáma"" mező értéke nem egyezhet meg! (Hibakód=&lt;M006&gt;)</Msg>
         </Message>
-        <Message id="32" msgLevel="error">
+        <Message id="28" msgLevel="error">
             <CalcId>18403</CalcId>
             <Msg>Az Ön által feltüntetett adószám hibás. / Csoportos áfa (áfa kód = 5), illetve csoportos társasági adó alanyok (áfa kód=6) ezt a bizonylatot nem nyújthatják be.  (Hibakód=&lt;1059776/q002&gt;)</Msg>
         </Message>
-        <Message id="33" msgLevel="error">
+        <Message id="29" msgLevel="error">
             <CalcId>14207</CalcId>
             <CalcId>168</CalcId>
             <Msg>[Ügyintéző adatai mezőcsoportnak "Neve" és "Telefonszáma" mezői az [Azonosító adatok] menüpontban] Ha az [Azonosító adatok] menüpontnak az "Ügyintéző adatai" mezőcsoportjában a "Neve" vagy "Telefonszáma" mező kitöltött, akkor a másik mező kitöltése is kötelező! (Hibakód=&lt;M005&gt;)</Msg>
         </Message>
-        <Message id="34" msgLevel="warning">
+        <Message id="30" msgLevel="warning">
             <CalcId>14178</CalcId>
             <Msg>["Ügyintéző adatai" mező az [Azonosító adatok] menüpontban] Kérjük, hogy az esetleges későbbi egyeztetések érdekében az [Azonosító adatok] menüpontban az Ügyintéző "Neve" és "Telefonszáma" mezőket szíveskedjen kitölteni. (Hibakód=&lt;M014&gt;)</Msg>
         </Message>
-        <Message id="35" msgLevel="error">
+        <Message id="31" msgLevel="error">
             <CalcId>18281</CalcId>
             <CalcId>18282</CalcId>
             <CalcId>18699</CalcId>
@@ -2158,59 +2142,59 @@
             <CalcId>18279</CalcId>
             <Msg>Az [Azonosító adatok] menüpontban a következő mezők kitöltése kötelező:  Bevallási időszak "kezdete" és "vége", ÉS  Végső anyavállalat konszolidált beszámolója szerinti adóév "kezdete" és "vége", ÉS  "Bevallás benyújtója" ÉS   "Bevallás benyújtásának oka". (Hibakód=&lt;M015&gt;)</Msg>
         </Message>
-        <Message id="36" msgLevel="error">
+        <Message id="32" msgLevel="error">
             <CalcId>18448</CalcId>
             <Msg>["Bevallási időszak kezdete" az Azonosító adatok] menüpontban]  Az [Azonosító adatok] menüpontban a "Bevallási időszak kezdete" dátumának az éve 2023. VAGY 2024. lehet! (Hibakód=&lt;M026&gt;)</Msg>
         </Message>
-        <Message id="37" msgLevel="error">
+        <Message id="33" msgLevel="error">
             <CalcId>18709</CalcId>
             <CalcId>18708</CalcId>
             <Msg>Ha az [Azonosító adatok] menüpontban a "Bevallási időszak" tól-ig dátuma kitöltött és tól&lt;=ig, ÉS a "Végső anyavállalat konszolidált beszámolója szerinti adóév" dátuma üres, AKKOR  a "Bevallási időszak" dátuma bekerül a "Végső anyavállalat konszolidált beszámolója szerinti adóév" dátuma mezőkbe.  Egyéb esetben nem változik meg a "Végső anyavállalat konszolidált beszámolója szerinti adóév" dátuma mezők értéke. (Hibakód=&lt;M040&gt;)</Msg>
         </Message>
-        <Message id="38" msgLevel="error">
+        <Message id="34" msgLevel="error">
             <CalcId>18283</CalcId>
             <Msg>A bevallási időszak végdátuma nem lehet korábbi, mint a bevallási időszak kezdő dátuma. (Hibakód=&lt;1059771/n018&gt;)</Msg>
         </Message>
-        <Message id="39" msgLevel="error">
+        <Message id="35" msgLevel="error">
             <CalcId>18402</CalcId>
             <Msg>Az [Azonosító adatok] menüpontban a Bevallási időszak nem lehet egy évnél hosszabb! (Hibakód=&lt;M009&gt;)</Msg>
         </Message>
-        <Message id="40" msgLevel="warning">
+        <Message id="36" msgLevel="warning">
             <CalcId>18619</CalcId>
             <Msg>Az [Azonosító adatok] menüpont Bevallás jellemzői mezőcsoportban  "Bevallás sorszáma" mezőt abban az esetben töltse ki, ha egynél több 24GLBADO bevallást kell beadnia ugyanazon, vagy átfedésben levő bevallási időszakra. (Hibakód=&lt;M029&gt;)</Msg>
         </Message>
-        <Message id="41" msgLevel="warning">
+        <Message id="37" msgLevel="warning">
             <CalcId>18710</CalcId>
             <Msg>["Végső anyavállalat konszolidált beszámolója szerinti adóév" az [Azonosító adatok] menüpontban]  Ha a bevallási időszaka eltérő a vállalatcsoport által meghatározott konszolidált beszámoló szerinti adóévtől, akkor kérjük módosítsa az  [Azonosító adatok] menüpontban a "Végső anyavállalat konszolidált beszámolója szerinti adóév" mezőben szereplő adatokat! (Hibakód=&lt;M043&gt;)</Msg>
         </Message>
-        <Message id="42" msgLevel="error">
+        <Message id="38" msgLevel="error">
             <CalcId>18700</CalcId>
             <Msg>Az [Azonosító adatok] menüpontban a "Végső anyavállalat konszolidált beszámolója szerinti adóév" mezőben a Kezdete dátum korábbi vagy egyező kell, hogy legyen, mint a Vége dátum! (Hibakód=&lt;M039&gt;)</Msg>
         </Message>
-        <Message id="43" msgLevel="warning">
+        <Message id="39" msgLevel="warning">
             <CalcId>18701</CalcId>
             <Msg>Az [Azonosító adatok] menüpontban a "Végső anyavállalat konszolidált beszámolója szerinti adóév" mezőben szereplő időszak nem lehet egy évnél hosszabb! (Hibakód=&lt;M038&gt;)</Msg>
         </Message>
-        <Message id="44" msgLevel="error">
+        <Message id="40" msgLevel="error">
             <CalcId>18449</CalcId>
             <CalcId>18450</CalcId>
             <Msg>["Nyilatkozatok a GloBE tv. 11. § (13) bekezdés c) és d) pontja alapján" mező az [Azonosító adatok] menüpontban] Ha az [Azonosító adatok] menüpontban a "Bevallás benyújtója" mező = 2, akkor a "Nyilatkozatok a GloBE tv. 11. § (13) bekezdés c) és d) pontja alapján" mező értéke = 1! Ha az [Azonosító adatok] menüpontban a "Bevallás benyújtója" mező = 1, akkor a "Nyilatkozatok a GloBE tv. 11. § (13) bekezdés c) és d) pontja alapján" mező értéke lehet üres VAGY 2 VAGY 3! (Hibakód=&lt;M027&gt;)</Msg>
         </Message>
-        <Message id="45" msgLevel="error">
+        <Message id="41" msgLevel="error">
             <CalcId>18457</CalcId>
             <Msg>["Jelölje, ha a csoporttagokra ugyanazon mentességi ok áll fenn" mező az [Azonosító adatok] menüpontban] Az [Azonosító adatok] menüpontban a "Jelölje, ha a csoporttagokra ugyanazon mentességi ok áll fenn" mező akkor tölthető ki, HA a "Bevallás benyújtója" mező = 2! (Hibakód=&lt;M028&gt;)</Msg>
         </Message>
-        <Message id="46" msgLevel="error">
+        <Message id="42" msgLevel="error">
             <CalcId>18421</CalcId>
             <CalcId>18380</CalcId>
             <CalcId>18711</CalcId>
             <Msg>Az [Azonosító adatok] menüpontnak a "Végső anyavállalat(ok) adatai" mezőcsoportjában az "Adószáma", "Név", "Országkód" mezők kitöltése kötelező! (Hibakód=&lt;M001&gt;)</Msg>
         </Message>
-        <Message id="47" msgLevel="error">
+        <Message id="43" msgLevel="error">
             <CalcId>18725</CalcId>
             <Msg>Az [Azonosító adatok] menüpont "Végső anyavállalat(ok) adatai" mezőcsoportban az egymás alatti mezőcsoportokat folyamatosan kell kitölteni, nem maradhatnak közbenső mezőcsoportok üresen! (Hibakód=&lt;M007&gt;)</Msg>
         </Message>
-        <Message id="48" msgLevel="error">
+        <Message id="44" msgLevel="error">
             <CalcId>18682</CalcId>
             <CalcId>18381</CalcId>
             <CalcId>18682</CalcId>
@@ -2231,7 +2215,7 @@
             <CalcId>18683</CalcId>
             <Msg>[Végső anyavállalat adatai mezőcsoport az [Azonosító adatok] menüpontban] Ha az [Azonosító adatok] menüpontnak a " Végső anyavállalat adatai" egyik mezőcsoportjában egy mező ("Adószám" vagy "Név" vagy "Országkód") kitöltött, akkor abban a mezőcsoportban a másik két mező kitöltése is kötelező! (Hibakód=&lt;M004&gt;)</Msg>
         </Message>
-        <Message id="49" msgLevel="error">
+        <Message id="45" msgLevel="error">
             <CalcId>18680</CalcId>
             <CalcId>18680</CalcId>
             <CalcId>18680</CalcId>
@@ -2240,20 +2224,20 @@
             <CalcId>18680</CalcId>
             <Msg>[Végső anyavállalat adatai mezőcsoportnak "Adószám" mezője az [Azonosító adatok] menüpontban] Ha az [Azonosító adatok] menüpontban a Végső anyavállalat "Országkód" mező = HU, AKKOR magyar adózó érvényes  adószámát kell feltüntetni az "Adószám" mezőben! (Hibakód=&lt;M042&gt;)</Msg>
         </Message>
-        <Message id="50" msgLevel="error">
+        <Message id="46" msgLevel="error">
             <CalcId>18412</CalcId>
             <Msg>[QDMTT-ELO] menüpontban:  Ha az [Azonosító adatok] menüpontban a "Bevallás benyújtásának oka" mező = 1, AKKOR  a [QDMTT-ELO] menüpontban az első "Csoporttag adószáma" mező értéke megegyezik az [Azonosító adatok] menüpont "Adózó adószáma" mező értékével! (Hibakód=&lt;M120&gt;)</Msg>
         </Message>
-        <Message id="51" msgLevel="error">
+        <Message id="47" msgLevel="error">
             <CalcId>18722</CalcId>
             <Msg>Az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban az egymás alatti mezőcsoportokat folyamatosan kell kitölteni, nem maradhatnak közbenső mezőcsoportok üresen! (Hibakód=&lt;M122&gt;)</Msg>
         </Message>
-        <Message id="52" msgLevel="error">
+        <Message id="48" msgLevel="error">
             <CalcId>18426</CalcId>
             <CalcId>18426</CalcId>
             <Msg>["Elismert belföldi kiegészítőadó-előleg kötelezettség és nyilatkozatok" mezőcsoport az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban] Ha az [Azonosító adatok] menüpontban  - a "Bevallás benyújtója" mező értéke 2, ÉS  - a "Bevallás benyújtásának oka" mező értéke 1, ÉS  - a "Jelölje, ha a csoporttagokra ugyanazon mentességi ok áll fenn" mező üres, akkor  legalább az első két "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoportot kötelező kitölteni! (Hibakód=&lt;M126&gt;)</Msg>
         </Message>
-        <Message id="53" msgLevel="error">
+        <Message id="49" msgLevel="error">
             <CalcId>18429</CalcId>
             <CalcId>18427</CalcId>
             <CalcId>18427</CalcId>
@@ -2262,7 +2246,7 @@
             <CalcId>18427</CalcId>
             <Msg>["Elismert belföldi kiegészítőadó-előleg kötelezettség és nyilatkozatok" mezőcsoport az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban] Ha az [Azonosító adatok] menüpontban a "Bevallás benyújtója" mező értéke 1, VAGY a "Jelölje, ha a csoporttagokra ugyanazon mentességi ok áll fenn" mező kitöltött, AKKOR az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban csak az első "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoportot lehet kitölteni! (Hibakód=&lt;M125&gt;)</Msg>
         </Message>
-        <Message id="54" msgLevel="error">
+        <Message id="50" msgLevel="error">
             <CalcId>18418</CalcId>
             <CalcId>18418</CalcId>
             <CalcId>18418</CalcId>
@@ -2271,11 +2255,11 @@
             <CalcId>18418</CalcId>
             <Msg>["Csoporttag megnevezése", "Csoporttag által fizetendő elismert belföldi kiegészítőadó-előleg" és "Előleg pénzneme" mezők az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban] Ha az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban a "Csoporttag adószáma" mező kitöltött, akkor a "Csoporttag megnevezése", a "Csoporttag által fizetendő elismert belföldi kiegészítőadó-előleg" és az "Előleg pénzneme" mezők kitöltése kötelező! (Hibakód=&lt;M121&gt;)</Msg>
         </Message>
-        <Message id="55" msgLevel="error">
+        <Message id="51" msgLevel="error">
             <CalcId>18467</CalcId>
             <Msg>["Csoporttag által fizetendő elismert belföldi kiegészítőadó-előleg" mező az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban]  Ha az [Adóazonosító adatok] menüpontban a "Nyilatkozatok a GloBE tv. 11. § (13) bekezdés c) és d) pontja alapján" értéke 2, akkor az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban a "Csoporttag által fizetendő elismert belföldi kiegészítőadó-előleg" mező értéke 0 (nulla). (Hibakód=&lt;M136&gt;)</Msg>
         </Message>
-        <Message id="56" msgLevel="warning">
+        <Message id="52" msgLevel="warning">
             <CalcId>18463</CalcId>
             <CalcId>18458</CalcId>
             <CalcId>18459</CalcId>
@@ -2284,7 +2268,7 @@
             <CalcId>18460</CalcId>
             <Msg>Kitöltést segítő:  A "Pénznem egységes választása" mezőcsoportban lévő a "Pénznemre vonatkozó választás" mező értéke bekerül az "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoport "Előleg pénzneme" mezőbe, HA az adott mezőcsoportban kitöltött a "Csoporttag által fizetendő elismert belföldi kiegészítőadó-előleg" mező értéke, ÉS  az "Előleg pénzneme" mező értéke ÜRES. (Hibakód=&lt;M131&gt;)</Msg>
         </Message>
-        <Message id="57" msgLevel="warning">
+        <Message id="53" msgLevel="warning">
             <CalcId>18624</CalcId>
             <CalcId>18649</CalcId>
             <CalcId>18650</CalcId>
@@ -2293,7 +2277,7 @@
             <CalcId>18653</CalcId>
             <Msg>Kitöltést segítő: Az [Adóelőleg kötelezettség] menüpontban] a "Mentességi okra vonatkozó választás" mező értéke bekerül az "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoport "Mentességi nyilatkozat" mezőbe, HA az adott mezőcsoportban kitöltött a "Csoporttag által fizetendő elismert belföldi kiegészítőadó-előleg" mező értéke, ÉS  a "Mentességi nyilatkozat" mező értéke ÜRES. (Hibakód=&lt;M137&gt;)</Msg>
         </Message>
-        <Message id="58" msgLevel="warning">
+        <Message id="54" msgLevel="warning">
             <CalcId>18470</CalcId>
             <CalcId>18470</CalcId>
             <CalcId>18470</CalcId>
@@ -2302,7 +2286,7 @@
             <CalcId>18470</CalcId>
             <Msg>["Csoporttag által fizetendő elismert belföldi kiegészítőadó-előleg" mező az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban] Ha a bevallást "Összes belföldi csoporttag nevében eljáró kijelölt helyi szervezet" adja be, akkor valamennyi csoporttag esetében meg kell adni a "Csoporttag által fizetendő elismert belföldi kiegészítőadó-előleg" összegét.  Kérjük győződjön meg róla, hogy minden csoporttag esetében helyesen adta meg a törvény szerint kiszámított adóelőleg összegét! (Hibakód=&lt;M128&gt;)</Msg>
         </Message>
-        <Message id="59" msgLevel="warning">
+        <Message id="55" msgLevel="warning">
             <CalcId>18423</CalcId>
             <CalcId>18423</CalcId>
             <CalcId>18423</CalcId>
@@ -2313,7 +2297,7 @@
             <CalcId>18766</CalcId>
             <Msg>Nagyságrendi vizsgálat! Kérjük, ellenőrizze a kitöltés helyességét, HA  az [ELO] menüpont "Elismert belföldi kiegészítőadó-előleg kötelezettség és nyilatkozatok" mezőcsoportjának valamelyik "Csoporttag által fizetendő elismert belföldi kiegészítőadó-előleg" mezőjében VAGY  az [ELSZ-T] menüpont "Elismert belföldi kiegészítőadó összege" mezőben VAGY  az [IIR] menüpont "IIR adó összege" mezőben a BEÍRT ADAT &gt;= 6 KARAKTER! (Hibakód=&lt;M016&gt;)</Msg>
         </Message>
-        <Message id="60" msgLevel="error">
+        <Message id="56" msgLevel="error">
             <CalcId>18393</CalcId>
             <CalcId>18466</CalcId>
             <CalcId>18393</CalcId>
@@ -2327,11 +2311,11 @@
             <CalcId>18393</CalcId>
             <Msg>["Elismert belföldi kiegészítőadó-előleg kötelezettség és nyilatkozatok" mezőcsoport az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban] Ha az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban valamelyik "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoportban a "Csoporttag megnevezése" VAGY a "Csoporttag adószáma" VAGY a "Csoporttag által fizetendő elismert belföldi kiegészítőadó-előleg" VAGY az "Előleg pénzneme" mező kitöltött, akkor a másik 3 mező kitöltése is kötelező!  Ha az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban valamelyik "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoportban a "Mentességi nyilatkozat" mező kitöltött, akkor a másik 4 mező kitöltése is kötelező! (Hibakód=&lt;M127&gt;)</Msg>
         </Message>
-        <Message id="61" msgLevel="error">
+        <Message id="57" msgLevel="error">
             <CalcId>18465</CalcId>
             <Msg>["Mentességi nyilatkozat" mező az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban]  Ha az [Adóazonosító adatok] menüpontban a "Jelölje, ha a csoporttagokra ugyanazon mentességi ok áll fenn" mező kitöltött, akkor az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban kötelező a "Mentességi nyilatkozat" mező kitöltése. (Hibakód=&lt;M132&gt;)</Msg>
         </Message>
-        <Message id="62" msgLevel="error">
+        <Message id="58" msgLevel="error">
             <CalcId>18464</CalcId>
             <CalcId>18464</CalcId>
             <CalcId>18464</CalcId>
@@ -2340,31 +2324,31 @@
             <CalcId>18464</CalcId>
             <Msg>["Elismert belföldi kiegészítőadó-előleg kötelezettség és nyilatkozatok" mezőcsoport az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban] Ha az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpont egyik "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoportjában a "Mentességi nyilatkozat" mező kitöltött, akkor a "Csoporttag által fizetendő elismert belföldi kiegészítőadó-előleg" mező értéke = 0. (Hibakód=&lt;M123&gt;)</Msg>
         </Message>
-        <Message id="63" msgLevel="error">
+        <Message id="59" msgLevel="error">
             <CalcId>18668</CalcId>
             <Msg>[NY-1] menüpont:  Ha az [Azonosító adatok] menüpontban a "Bevallás benyújtásának oka" mező = (2 vagy 3), ÉS  az [ELSZ-CS] menüpontban valamelyik "Mentességi nyilatkozat" mező üres, AKKOR  az [NY-1] menüpontban 01. mező kitöltése kötelező! (Hibakód=&lt;M083&gt;)</Msg>
         </Message>
-        <Message id="64" msgLevel="error">
+        <Message id="60" msgLevel="error">
             <CalcId>18667</CalcId>
             <Msg>[NY-1] Ha az [NY-1] 01. mező kitöltött, AKKOR  az [NY-1] 03. VAGY 04. mezők közül egyik kitöltése kötelező! (Hibakód=&lt;M084&gt;)</Msg>
         </Message>
-        <Message id="65" msgLevel="error">
+        <Message id="61" msgLevel="error">
             <CalcId>18560</CalcId>
             <Msg>[NY-1] Az [NY-1] 02. mező akkor tölthető ki, ha [NY-1] 01. mező = 3! (Hibakód=&lt;1093002/M082&gt;)</Msg>
         </Message>
-        <Message id="66" msgLevel="error">
+        <Message id="62" msgLevel="error">
             <CalcId>18670</CalcId>
             <Msg>[NY-1] Ha az [Azonosító adatok] menüpontban a "Bevallás benyújtásának oka" mező = (2 vagy 3), AKKOR  az [NY-1] 21. mező kitöltése kötelező! (Hibakód=&lt;M086&gt;)</Msg>
         </Message>
-        <Message id="67" msgLevel="error">
+        <Message id="63" msgLevel="error">
             <CalcId>18669</CalcId>
             <Msg>[NY-1] Ha az [Azonosító adatok] menüpontban a "Bevallás benyújtásának oka" mező = (2 vagy 3), AKKOR  az [NY-1] 20. mező kitöltése kötelező! (Hibakód=&lt;M085&gt;)</Msg>
         </Message>
-        <Message id="68" msgLevel="error">
+        <Message id="64" msgLevel="error">
             <CalcId>18777</CalcId>
             <Msg>[NY-1] Az [NY-1] 03. mező akkor tölthető ki, ha [NY-1] 04. mező üres!  Fordítva is igaz: Az [NY-1] 04. mező akkor tölthető ki, ha [NY-1] 03. mező üres! (Hibakód=&lt;1093603/M094&gt;)</Msg>
         </Message>
-        <Message id="69" msgLevel="error">
+        <Message id="65" msgLevel="error">
             <CalcId>18687</CalcId>
             <CalcId>18686</CalcId>
             <CalcId>18685</CalcId>
@@ -2412,7 +2396,7 @@
             <CalcId>18685</CalcId>
             <Msg>[NY-2] Ha az [NY-2] menüpont egy mezőcsoportjában szerepel adat, akkor abban a mezőcsoportban minden mező kitöltése kötelező! (Hibakód=&lt;M088&gt;)</Msg>
         </Message>
-        <Message id="70" msgLevel="error">
+        <Message id="66" msgLevel="error">
             <CalcId>18689</CalcId>
             <CalcId>18689</CalcId>
             <CalcId>18689</CalcId>
@@ -2430,80 +2414,88 @@
             <CalcId>18689</CalcId>
             <Msg>[NY-2] Hibás a magyar adószám az [NY-2] menüpontban! (Hibakód=&lt;M089&gt;)</Msg>
         </Message>
-        <Message id="71" msgLevel="error">
+        <Message id="67" msgLevel="error">
             <CalcId>18726</CalcId>
             <Msg>Az [NY-2] menüpont "Kizárt szervezet adatai" mezőcsoportban az egymás alatti mezőcsoportokat folyamatosan kell kitölteni, nem maradhatnak közbenső mezőcsoportok üresen! (Hibakód=&lt;M091&gt;)</Msg>
         </Message>
-        <Message id="72" msgLevel="error">
+        <Message id="68" msgLevel="error">
+            <CalcId>18785</CalcId>
+            <Msg>[ELSZ-CS] menüpont:  Ha az [Azonosító adatok] menüpontban a "Bevallás benyújtója" mező értéke = 1, ÉS a "Bevallás benyújtásának oka" = (2 vagy 3), AKKOR  az [ELSZ-CS] menüpontban csak 1 darab adózót lehet feltüntetni! (Hibakód=&lt;M243&gt;)</Msg>
+        </Message>
+        <Message id="69" msgLevel="error">
             <CalcId>18755</CalcId>
             <Msg>Az [ELSZ-CS] menüpontban az egymás alatti mezőcsoportokat folyamatosan kell kitölteni, nem maradhatnak közbenső mezőcsoportok üresen! (Hibakód=&lt;M216&gt;)</Msg>
         </Message>
-        <Message id="73" msgLevel="error">
+        <Message id="70" msgLevel="error">
             <CalcId>18588</CalcId>
             <Msg>Ha az [ELSZ-CS] menüpontban az "Alcsoport megnevezése" mező kitöltött, AKKOR a  "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező nem lehet kitöltve! (Hibakód=&lt;M215&gt;)</Msg>
         </Message>
-        <Message id="74" msgLevel="warning">
+        <Message id="71" msgLevel="warning">
             <CalcId>18654</CalcId>
             <CalcId>18759</CalcId>
             <Msg>Kitöltést segítő: A [QDMTT-ELSZ] menüpontban a "Mentességi okra vonatkozó választás" mező értéke bekerül az "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoport "Mentességi nyilatkozat" mezőbe, HA  az adott mezőcsoportban kitöltött a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" VAGY az "Alcsoport megnevezése" mezők értéke, ÉS  a "Mentességi nyilatkozat" mező értéke ÜRES. (Hibakód=&lt;M204&gt;)</Msg>
         </Message>
-        <Message id="75" msgLevel="error">
+        <Message id="72" msgLevel="error">
             <CalcId>18595</CalcId>
             <Msg>Az [ELSZ-CS] menüpontban a "Tényleges adómérték" mező értéke nem lehet nagyobb 100%-nál! (Hibakód=&lt;M218&gt;)</Msg>
         </Message>
-        <Message id="76" msgLevel="error">
+        <Message id="73" msgLevel="error">
             <CalcId>18593</CalcId>
             <Msg>Ha az [ELSZ-CS] menüpontban a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező VAGY  az "Alcsoport megnevezése" mező kitöltött, ÉS  a "Mentességi nyilatkozat" mező üres, AKKOR a  "Tényleges adómérték" mező kitöltése kötelező! (Hibakód=&lt;M217&gt;)</Msg>
         </Message>
-        <Message id="77" msgLevel="error">
+        <Message id="74" msgLevel="error">
             <CalcId>18594</CalcId>
             <Msg>Ha az [ELSZ-CS] menüpontban a "Tényleges adómérték", a "Nyilatkozat a 4/2026. (I.26.) NGM rendelet 4. § (1) bekezdés f) és g) pontja alapján" vagy a "Mentességi nyilatkozat" mező valamelyike kitöltött, AKKOR  a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" és az "Alcsoport megnevezése" mezők közül  az egyik mező kitöltése kötelező!  (A két mező közül csak egy lehet kitöltve!) (Hibakód=&lt;M232&gt;)</Msg>
         </Message>
-        <Message id="78" msgLevel="error">
+        <Message id="75" msgLevel="error">
             <CalcId>18758</CalcId>
             <Msg>[ELSZ-CS] menüpont:  Ha az [Azonosító adatok] menüpontban a "Bevallás benyújtásának oka" mező = (2 vagy 3), AKKOR  az [ELSZ-CS] menüpontban a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" VAGY "Alcsoport megnevezése" mező kitöltése kötelező! (Hibakód=&lt;M210&gt;)</Msg>
         </Message>
-        <Message id="79" msgLevel="error">
+        <Message id="76" msgLevel="error">
             <CalcId>18643</CalcId>
             <Msg>Ha az [ELSZ-CS] menüpontban a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező kitöltött, AKKOR az  "Alcsoport megnevezése" mező nem lehet kitöltve! (Hibakód=&lt;M212&gt;)</Msg>
         </Message>
-        <Message id="80" msgLevel="error">
+        <Message id="77" msgLevel="error">
             <CalcId>18674</CalcId>
             <Msg>. (Hibakód=&lt;18674/&gt;)</Msg>
         </Message>
-        <Message id="81" msgLevel="error">
+        <Message id="78" msgLevel="error">
             <CalcId>18753</CalcId>
-            <Msg>Az [ELSZ-T] menüpontban kell lennie olyan "Csoporttag adószáma" mező adatának, amelynek értéke megegyezik az "Alcsoport megnevezése" mező értékével! (Hibakód=&lt;M235&gt;)</Msg>
+            <Msg>[ELSZ-T] menüpont:  Ha az [Azonosító adatok] menüpontban a "Bevallás benyújtója" mező értéke = 2, AKKOR  az [ELSZ-T] menüpontban kell lennie olyan "Csoporttag adószáma" mező adatának, amelynek értéke megegyezik az "Alcsoport megnevezése" mező értékével! (Hibakód=&lt;M235&gt;)</Msg>
         </Message>
-        <Message id="82" msgLevel="error">
+        <Message id="79" msgLevel="error">
             <CalcId>18677</CalcId>
             <Msg>[ELSZ-T] menüpont:   Ha az [ELSZ-CS] menüpontban az "Alcsoport megnevezése" mező kitöltött, AKKOR  kell lennie olyan [ELSZ-T] menüpontnak, ahol az "Alcsoport megnevezése" mező értéke megegyezik az  [ELSZ-CS] menüpontban lévő "Alcsoport megnevezése" mező értékével. (Hibakód=&lt;M213&gt;)</Msg>
         </Message>
-        <Message id="83" msgLevel="error">
+        <Message id="80" msgLevel="error">
             <CalcId>18734</CalcId>
             <Msg>[ELSZ-T] menüpont:  Ha az [ELSZ-CS] menüpontban a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező kitöltött, AKKOR  kell lennie olyan [ELSZ-T] menüpontnak, ahol a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó  csoporttagokat kíván feltüntetni" mező kitöltött. (Hibakód=&lt;M223&gt;)</Msg>
         </Message>
-        <Message id="84" msgLevel="error">
+        <Message id="81" msgLevel="error">
             <CalcId>18608</CalcId>
             <Msg>Ha az [ELSZ-T] menüpontban a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező kitöltött, AKKOR az  "Alcsoport megnevezése" mező nem lehet kitöltve! (Hibakód=&lt;M220&gt;)</Msg>
         </Message>
-        <Message id="85" msgLevel="error">
+        <Message id="82" msgLevel="error">
             <CalcId>18600</CalcId>
             <Msg>[ELSZ-CS] menüpont:  Ha az [ELSZ-T] menüpontban az "Alcsoport megnevezése" mező kitöltött, AKKOR  kell lennie olyan [ELSZ-CS] menüpontnak, ahol az "Alcsoport megnevezése" mező értéke megegyezik az [ELSZ-T] menüpontban lévő "Alcsoport megnevezése" mező értékével. (Hibakód=&lt;M225&gt;)</Msg>
         </Message>
-        <Message id="86" msgLevel="error">
+        <Message id="83" msgLevel="error">
+            <CalcId>18786</CalcId>
+            <Msg>[ELSZ-T] menüpont:  Ha az [Azonosító adatok] menüpontban a "Bevallás benyújtója" mező értéke = 1, ÉS a "Bevallás benyújtásának oka" = (2 vagy 3), AKKOR  az [ELSZ-T] menüpontban csak 1 darab adózót lehet feltüntetni! (Hibakód=&lt;M244&gt;)</Msg>
+        </Message>
+        <Message id="84" msgLevel="error">
             <CalcId>18717</CalcId>
             <Msg>Az [ELSZ-T] menüpontban az egymás alatti mezőcsoportokat folyamatosan kell kitölteni, nem maradhatnak közbenső mezőcsoportok üresen! (Hibakód=&lt;M222&gt;)</Msg>
         </Message>
-        <Message id="87" msgLevel="error">
+        <Message id="85" msgLevel="error">
             <CalcId>18644</CalcId>
             <Msg>Ha az [ELSZ-T] menüpontban az "Alcsoport megnevezése" mező kitöltött, AKKOR a  "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező nem lehet kitöltve! (Hibakód=&lt;M229&gt;)</Msg>
         </Message>
-        <Message id="88" msgLevel="error">
+        <Message id="86" msgLevel="error">
             <CalcId>18745</CalcId>
             <Msg>Ha az [ELSZ-T] menüpontban a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező kitöltött, AKKOR  kell lennie olyan [ELSZ-CS] menüpontnak, ahol a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező kitöltött. (Hibakód=&lt;M219&gt;)</Msg>
         </Message>
-        <Message id="89" msgLevel="error">
+        <Message id="87" msgLevel="error">
             <CalcId>18742</CalcId>
             <CalcId>18741</CalcId>
             <CalcId>18739</CalcId>
@@ -2515,94 +2507,102 @@
             <CalcId>18738</CalcId>
             <Msg>Ha az  [ELSZ-T] menüpontban a "Csoporttag adószáma" mező kitöltött, akkor a következő mezők kitöltése is kötelező (9 db):  "Csoporttag megnevezése",  "Csoporttag adóévének" kezdete és vége,  "Csoporttagra vonatkozó QDMTT adó számítási időszakának" kezdete és vége,  "Elismert belföldi kiegészítőadó" összege és pénzneme,  "Csoporttag által bevallott és megfizetett elismert belföldi  kiegészítőadó-előleg" összege és pénzneme. (Hibakód=&lt;M228&gt;)</Msg>
         </Message>
-        <Message id="90" msgLevel="error">
+        <Message id="88" msgLevel="error">
             <CalcId>18692</CalcId>
             <Msg>Az [ELSZ-T] menüpontban a "Csoporttagra vonatkozó QDMTT adó számítási időszakának" mezőiben a Kezdete dátum korábbi vagy egyező kell, hogy legyen, mint a Vége dátum! (Hibakód=&lt;M227&gt;)</Msg>
         </Message>
-        <Message id="91" msgLevel="error">
+        <Message id="89" msgLevel="error">
             <CalcId>18596</CalcId>
             <Msg>Az [ELSZ-T] menüpontban a "Csoporttag típusa" mező nem lehet kitöltött, HA abban a mezőcsoportban a "Jelölje, ha a vállalatcsoporton belül külön alcsoportba nem tartozó csoporttagokat kíván feltüntetni" mező kitöltött. (Hibakód=&lt;M208&gt;)</Msg>
         </Message>
-        <Message id="92" msgLevel="error">
+        <Message id="90" msgLevel="error">
             <CalcId>18597</CalcId>
             <Msg>. (Hibakód=&lt;18597/&gt;)</Msg>
         </Message>
-        <Message id="93" msgLevel="warning">
+        <Message id="91" msgLevel="warning">
             <CalcId>18756</CalcId>
             <Msg>[ELSZ-T] menüpont:  Az alcsoport vezetőjének (az [ELSZ-T] menüpontban az "Alcsoport típusa" = Csoporttag adószáma")  a "Csoporttag típusa" mező értéke = 1, 3 vagy 6 lehet. (Hibakód=&lt;M209&gt;)</Msg>
         </Message>
-        <Message id="94" msgLevel="warning">
+        <Message id="92" msgLevel="warning">
             <CalcId>18544</CalcId>
             <Msg>Kitöltést segítő:  A "Pénznem egységes választása" mezőcsoportban lévő a "Pénznemre vonatkozó választás" mező értéke bekerül a  "QDMTT-ELSZ-CS" mezőcsoport "Elismert belföldi kiegészítőadó pénzneme" mezőbe, HA az adott mezőcsoportban kitöltött az "Elismert belföldi kiegészítőadó összege" mező értéke, ÉS  az "Elismert belföldi kiegészítőadó pénzneme" mező értéke ÜRES. (Hibakód=&lt;M203&gt;)</Msg>
         </Message>
-        <Message id="95" msgLevel="error">
+        <Message id="93" msgLevel="error">
             <CalcId>18666</CalcId>
             <Msg>Az [ELSZ-T] menüpont "Csoporttag adószáma" mező adata már szerepel ebben a menüpontban! (Hibakód=&lt;M234&gt;)</Msg>
         </Message>
-        <Message id="96" msgLevel="error">
+        <Message id="94" msgLevel="error">
             <CalcId>18765</CalcId>
             <Msg>Ha az [ELSZ-T] menüpontban bármelyik mező kitöltött, AKKOR  a "Csoporttag adószáma" mező kitöltése is kötelező! (Hibakód=&lt;M236&gt;)</Msg>
         </Message>
-        <Message id="97" msgLevel="error">
+        <Message id="95" msgLevel="error">
             <CalcId>18694</CalcId>
             <Msg>Ha az [ELSZ-T] menüpontban Csoporttag adóévének "kezdete" mező kitöltött, AKKOR Csoporttag adóévének "vége" mező kitöltése is kötelező! Fordítva is igaz: ha [ELSZ-T] menüpontban Csoporttag adóévének "vége" mező kitöltött, AKKOR Csoporttag adóévének "kezdete" mező kitöltése is kötelező! (Hibakód=&lt;M221&gt;)</Msg>
         </Message>
-        <Message id="98" msgLevel="error">
+        <Message id="96" msgLevel="error">
             <CalcId>18691</CalcId>
             <Msg>Az [ELSZ-T] menüpontban a "Csoporttag adóévének" mezőiben a Kezdete dátum korábbi vagy egyező kell, hogy legyen, mint a Vége dátum! (Hibakód=&lt;M226&gt;)</Msg>
         </Message>
-        <Message id="99" msgLevel="error">
+        <Message id="97" msgLevel="warning">
+            <CalcId>18784</CalcId>
+            <Msg>Ha az [ELSZ-T] menüpontban a "Csoporttag közösségi adószáma" mező kitöltött, AKKOR  a "Csoporttag közösségi adószáma" mező értéke megegyezik a "Csoporttag adószáma" mező értékével! (Hibakód=&lt;M241&gt;)</Msg>
+        </Message>
+        <Message id="98" msgLevel="error">
             <CalcId>18754</CalcId>
             <CalcId>18763</CalcId>
             <CalcId>18762</CalcId>
             <Msg>[IIR] menüpont:  Ha az [IIR] menüpontban az "Anyavállalat adószáma" mező kitöltött, AKKOR  az "Anyavállalat megnevezése", ÉS  az "Anyavállalat adóévének kezdete", ÉS  az "IIR adó összege", ÉS  az "Anyavállalat státusza"  mező kitöltése is kötelező! (Hibakód=&lt;M311&gt;)</Msg>
         </Message>
-        <Message id="100" msgLevel="error">
+        <Message id="99" msgLevel="error">
             <CalcId>18757</CalcId>
             <Msg>[IIR] menüpont:  Ha az [Azonosító adatok] menüpontban a "Bevallás benyújtásának oka" mező = 3, AKKOR  az [IIR] menüpontban az "Anyavállalat adószáma" mező kitöltése kötelező! (Hibakód=&lt;M312&gt;)</Msg>
         </Message>
-        <Message id="101" msgLevel="error">
+        <Message id="100" msgLevel="error">
             <CalcId>18665</CalcId>
             <Msg>Az [IIR] menüpont "Anyavállalat adószáma" mező adata már szerepel ebben a menüpontban! (Hibakód=&lt;M303&gt;)</Msg>
         </Message>
-        <Message id="102" msgLevel="error">
+        <Message id="101" msgLevel="error">
             <CalcId>18716</CalcId>
             <Msg>Az [IIR] menüpontban az egymás alatti mezőcsoportokat folyamatosan kell kitölteni, nem maradhatnak közbenső mezőcsoportok üresen! (Hibakód=&lt;M306&gt;)</Msg>
         </Message>
-        <Message id="103" msgLevel="error">
+        <Message id="102" msgLevel="error">
             <CalcId>18764</CalcId>
             <Msg>Ha az [IIR] menüpontban bármelyik mező kitöltött, AKKOR  az "Anyavállalat adószáma" mező kitöltése is kötelező! (Hibakód=&lt;M313&gt;)</Msg>
         </Message>
-        <Message id="104" msgLevel="warning">
+        <Message id="103" msgLevel="warning">
             <CalcId>18671</CalcId>
             <Msg>Az [IIR] menüpont "Anyavállalat megnevezése" mező adata már szerepel ebben a menüpontban! (Hibakód=&lt;M304&gt;)</Msg>
         </Message>
-        <Message id="105" msgLevel="error">
+        <Message id="104" msgLevel="error">
             <CalcId>18698</CalcId>
             <Msg>Ha az [IIR] menüpontban az "IIR adó összege" mező kitöltött, AKKOR az "IIR adó pénzneme" mező kitöltése is kötelező!  Fordítva is igaz: ha az [IIR] menüpontban az "IIR adó pénzneme" mező kitöltött, AKKOR az ""IIR adó összege" mező kitöltése is kötelező! (Hibakód=&lt;M310&gt;)</Msg>
         </Message>
-        <Message id="106" msgLevel="warning">
+        <Message id="105" msgLevel="warning">
             <CalcId>18622</CalcId>
             <Msg>Kitöltést segítő:  A "Pénznem egységes választása" mezőcsoportban lévő a "Pénznemre vonatkozó választás" mező értéke bekerül az  "IIR adókötelezettség és nyilatkozatok" mezőcsoport "IIR adó pénzneme" mezőbe, HA az adott mezőcsoportban kitöltött az "IIR adó összege" mező értéke, ÉS  az "IIR adó pénzneme" mező értéke ÜRES. (Hibakód=&lt;M302&gt;)</Msg>
         </Message>
-        <Message id="107" msgLevel="error">
+        <Message id="106" msgLevel="error">
             <CalcId>18693</CalcId>
             <Msg>Ha az [IIR] menüpontban az Anyavállalat adóévének "kezdete" mező kitöltött, AKKOR Anyavállalat adóévének "vége" mező kitöltése is kötelező! Fordítva is igaz: ha [IIR] menüpontban az Anyavállalat adóévének "vége" mező kitöltött, AKKOR az Anyavállalat adóévének "kezdete" mező kitöltése is kötelező! (Hibakód=&lt;M308&gt;)</Msg>
         </Message>
-        <Message id="108" msgLevel="error">
+        <Message id="107" msgLevel="error">
             <CalcId>18690</CalcId>
             <Msg>Az [IIR] menüpontban az "Anyavállalat adóévének" mezőiben a Kezdete dátum korábbi vagy egyező kell, hogy legyen, mint a Vége dátum! (Hibakód=&lt;M309&gt;)</Msg>
         </Message>
-        <Message id="109" msgLevel="error">
+        <Message id="108" msgLevel="error">
             <CalcId>18752</CalcId>
             <CalcId>18480</CalcId>
             <Msg>Ha az [Önellenőrzés] menüpontban "A fizetendő önellenőrzési pótlék összege" mezők bármelyike kitöltött, AKKOR  a "Fizetendő önellenőrzési pótlék összege" mezőcsoportban a "A fizetendő önellenőrzési pótlék összege" mező értéke egyenlő  az [Önellenőrzés] menüpont másik három mezőcsoportjának "A fizetendő önellenőrzési pótlék összege" mezőiben feltüntetett adatok összegével. (Hibakód=&lt;M403&gt;)</Msg>
         </Message>
-        <Message id="110" msgLevel="error">
+        <Message id="109" msgLevel="error">
             <CalcId>18749</CalcId>
             <CalcId>18749</CalcId>
             <CalcId>18749</CalcId>
             <Msg>Ha az [Önellenőrzés] menüpontban a "Magyar forintban bevallott kiegészítő adó összegének változása" mezőcsoportban a "Módosított adó összege" mező kitöltött, AKKOR  "Adókötelezettség változása" mező = Módosított adó összege" mező - "Eredeti adó összege" mező!  Igaz ez az "Euroban bevallott kiegészítő adó összegének változása" mezőcsoport, ÉS  az "Amerikai dollárban bevallott kiegészítő adó összegének változása" mezőcsoport esetében is. (Hibakód=&lt;M406&gt;)</Msg>
+        </Message>
+        <Message id="110" msgLevel="error">
+            <CalcId>18783</CalcId>
+            <Msg>Ha az [Önellenőrzés] menüpontban az "Amerikai dollárban bevallott kiegészítő adó összegének változása" mezőcsoportban a "Módosított adó összege" mező kitöltött, AKKOR  a mező értéke megegyezik [OSSZ] menüpontjában  "Az amerikai dollárban kitöltött QDMTT adó összesített adatai" mezőcsoport "Összeg" mező ÉS  "Az amerikai dollárban kitöltött IIR adó összesített adatai" mezőcsoport "Összeg" mező összegével! (Hibakód=&lt;M412&gt;)</Msg>
         </Message>
         <Message id="111" msgLevel="error">
             <CalcId>18750</CalcId>
@@ -2611,154 +2611,162 @@
             <Msg>Ha az [Önellenőrzés] menüpontban a "Magyar forintban bevallott kiegészítő adó összegének változása" mezőcsoportban a "Módosított adó összege" mező kitöltött, AKKOR  az "Eredeti adó összege" mező kitöltése is kötelező!  Igaz ez az "Euroban bevallott kiegészítő adó összegének változása" mezőcsoport, ÉS  az "Amerikai dollárban bevallott kiegészítő adó összegének változása" mezőcsoport esetében is. (Hibakód=&lt;M405&gt;)</Msg>
         </Message>
         <Message id="112" msgLevel="error">
+            <CalcId>18781</CalcId>
+            <Msg>Ha az [Önellenőrzés] menüpontban a "Magyar forintban bevallott kiegészítő adó összegének változása" mezőcsoportban a "Módosított adó összege" mező kitöltött, AKKOR  a mező értéke megegyezik [OSSZ] menüpontjában  "A magyar forintban kitöltött QDMTT adó összesített adatai" mezőcsoport "Összeg" mező ÉS  "A magyar forintban kitöltött IIR adó összesített adatai" mezőcsoport "Összeg" mező összegével! (Hibakód=&lt;M410&gt;)</Msg>
+        </Message>
+        <Message id="113" msgLevel="error">
+            <CalcId>18782</CalcId>
+            <Msg>Ha az [Önellenőrzés] menüpontban az "Euróban bevallott kiegészítő adó összegének változása" mezőcsoportban a "Módosított adó összege" mező kitöltött, AKKOR  a mező értéke megegyezik [OSSZ] menüpontjában  "Az euróban kitöltött QDMTT adó összesített adatai" mezőcsoport "Összeg" mező ÉS  "Az euróban kitöltött IIR adó összesített adatai" mezőcsoport "Összeg" mező összegével! (Hibakód=&lt;M411&gt;)</Msg>
+        </Message>
+        <Message id="114" msgLevel="error">
             <CalcId>18751</CalcId>
             <Msg>[Önellenőrzés] menüpont:  Ha az [Azonosító adatok] menüpontban a "Bevallás jellege" mező = O, ÉS az "Ismételt önellenőrzés jelölése" mező üres, AKKOR  az [Önellenőrzés] menüpontban a "Módosított adó összege" mezők legalább egyikének a kitöltése kötelező! (Hibakód=&lt;M404&gt;)</Msg>
         </Message>
-        <Message id="113" msgLevel="error">
+        <Message id="115" msgLevel="error">
             <CalcId>18748</CalcId>
             <Msg>[Önellenőrzés] menüpont:  Ha az [Azonosító adatok] menüpontban a "Bevallás jellege" mező = O, AKKOR  az [Önellenőrzés] menüpontban legalább egy mezőnek kitöltöttnek kell lennie! (Hibakód=&lt;M402&gt;)</Msg>
         </Message>
-        <Message id="114" msgLevel="error">
+        <Message id="116" msgLevel="error">
             <CalcId>18252</CalcId>
             <Msg>Futtassa a számított mezők újraszámítását! (Hibakód=&lt;1059778/w010&gt;)</Msg>
         </Message>
-        <Message id="115" msgLevel="error">
+        <Message id="117" msgLevel="error">
             <CalcId>18268</CalcId>
             <Msg>[Főlap] Ha üres a bevallás [ELO] lapja, akkor a Főlapon lévő lapkitöltés kódkocka [ELO] lapra vonatkozó jelölése is üres! Fordítva is igaz: ha a Főlapon lévő lapkitöltés kódkocka [ELO] lapra vonatkozó jelölése üres, akkor az [ELO] lap is üres! Ha a lap kitöltött, akkor a lapkitöltés kódkocka értéke a beadott lapoknak megfelelő szám lehet! (Hibakód=&lt;1093067/M018&gt;)</Msg>
         </Message>
-        <Message id="116" msgLevel="error">
+        <Message id="118" msgLevel="error">
             <CalcId>18328</CalcId>
             <Msg>[ELO] Az [ELO] lap lapszámát ki kell tölteni 01-el kezdődően és folyamatosan további számozással, valamennyi [ELO] lapon, amit szeretne benyújtani. (Hibakód=&lt;1062456/M124&gt;)</Msg>
         </Message>
-        <Message id="117" msgLevel="error">
+        <Message id="119" msgLevel="error">
             <CalcId>18335</CalcId>
             <Msg>["A magyar forintban kitöltött kiegészítőadó-előleg összesített adatai: Összeg" mező az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban]  "A magyar forintban kitöltött kiegészítőadó-előleg összesített adatai: Összeg" mező értéke egyenlő az "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoportokban a "Csoporttagok által fizetendő elismert belföldi kiegészítőadó-előleg" mezők összegével, ahol az "Előleg pénzneme" mezők értéke = 1. (Hibakód=&lt;M102&gt;)</Msg>
         </Message>
-        <Message id="118" msgLevel="error">
+        <Message id="120" msgLevel="error">
             <CalcId>18336</CalcId>
             <Msg>["Az euróban kitöltött kiegészítőadó-előleg összesített adatai: Összeg" mező az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban]  "Az euróban kitöltött kiegészítőadó-előleg összesített adatai: Összeg" mező értéke egyenlő az "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoportokban a "Csoporttagok által fizetendő elismert belföldi kiegészítőadó-előleg" mezők összegével, ahol az "Előleg pénzneme" mezők értéke = 2. (Hibakód=&lt;M103&gt;)</Msg>
         </Message>
-        <Message id="119" msgLevel="error">
+        <Message id="121" msgLevel="error">
             <CalcId>18337</CalcId>
             <Msg>["Az amerikai dollárban kitöltött kiegészítőadó-előleg összesített adatai: Összeg" mező az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban]  "Az amerikai dollárban kitöltött kiegészítőadó-előleg összesített adatai: Összeg" mező értéke egyenlő az "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoportokban a "Csoporttagok által fizetendő elismert belföldi kiegészítőadó-előleg" mezők összegével, ahol az "Előleg pénzneme" mezők értéke = 3. (Hibakód=&lt;M104&gt;)</Msg>
         </Message>
-        <Message id="120" msgLevel="error">
+        <Message id="122" msgLevel="error">
             <CalcId>18338</CalcId>
             <Msg>["A magyar forintban kitöltött kiegészítőadó-előleg összesített adatai: Adózók száma" mező az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban] "A magyar forintban kitöltött kiegészítőadó-előleg összesített adatai: Adózók száma" mező értéke egyenlő az "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoportokban lévő azon mezők számával, amelyeknél az "Előleg pénzneme" mezők értéke 1. (Hibakód=&lt;M105&gt;)</Msg>
         </Message>
-        <Message id="121" msgLevel="error">
+        <Message id="123" msgLevel="error">
             <CalcId>18339</CalcId>
             <Msg>["Az euróban kitöltött kiegészítőadó-előleg összesített adatai: Adózók száma" mező az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban] "Az euróban kitöltött kiegészítőadó-előleg összesített adatai: Adózók száma" mező értéke egyenlő az "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoportokban lévő azon mezők számával, amelyeknél az "Előleg pénzneme" mezők értéke 2. (Hibakód=&lt;M106&gt;)</Msg>
         </Message>
-        <Message id="122" msgLevel="error">
+        <Message id="124" msgLevel="error">
             <CalcId>18340</CalcId>
             <Msg>["Az amerikai dollárban kitöltött kiegészítőadó-előleg összesített adatai: Adózók száma" mező az [Elismert belföldi kiegészítőadó-előleg kötelezettség] menüpontban] "Az amerikai dollárban kitöltött kiegészítőadó-előleg összesített adatai: Adózók száma" mező értéke egyenlő az "Elismert belföldi kiegészítőadó-előleg kötelezettség és mentességi nyilatkozatok" mezőcsoportokban lévő azon mezők számával, amelyeknél az "Előleg pénzneme" mezők értéke 3. (Hibakód=&lt;M107&gt;)</Msg>
         </Message>
-        <Message id="123" msgLevel="error">
+        <Message id="125" msgLevel="error">
             <CalcId>18356</CalcId>
             <Msg>[Főlap] Ha üres a bevallás [OSSZ] lapja, akkor a Főlapon lévő lapkitöltés kódkocka [OSSZ] lapra vonatkozó jelölése is üres! Fordítva is igaz: ha a Főlapon lévő lapkitöltés kódkocka [OSSZ] lapra vonatkozó jelölése üres, akkor az [OSSZ] lap is üres! Ha a lap kitöltött, akkor a lapkitöltés kódkocka értéke 1! (Hibakód=&lt;1093068/M020&gt;)</Msg>
         </Message>
-        <Message id="124" msgLevel="error">
+        <Message id="126" msgLevel="error">
             <CalcId>18390</CalcId>
             <Msg>[MEGJ] A lap lapszámát ki kell tölteni 01-el kezdődően és folyamatosan további számozással, valamennyi [MEGJ] lapon. (Hibakód=&lt;1062639/M019&gt;)</Msg>
         </Message>
-        <Message id="125" msgLevel="error">
+        <Message id="127" msgLevel="error">
             <CalcId>18434</CalcId>
             <Msg>[ANYA] Az [ANYA] lap lapszámát ki kell tölteni 01-el kezdődően és folyamatosan további számozással, valamennyi [ANYA] lapon, amit szeretne benyújtani. (Hibakód=&lt;1064038/M021&gt;)</Msg>
         </Message>
-        <Message id="126" msgLevel="error">
+        <Message id="128" msgLevel="error">
             <CalcId>18435</CalcId>
             <Msg>[Főlap] Ha üres a bevallás [ANYA] lapja, akkor a Főlapon lévő lapkitöltés kódkocka [ANYA] lapra vonatkozó jelölése is üres! Fordítva is igaz: ha a Főlapon lévő lapkitöltés kódkocka [ANYA] lapra vonatkozó jelölése üres, akkor az [ANYA] lap is üres! Ha a lap kitöltött, akkor a lapkitöltés kódkocka értéke a beadott lapoknak megfelelő szám lehet! (Hibakód=&lt;1093075/M022&gt;)</Msg>
         </Message>
-        <Message id="127" msgLevel="error">
+        <Message id="129" msgLevel="error">
             <CalcId>18499</CalcId>
             <Msg>[ELSZ-T] Az [ELSZ-T] lap lapszámát ki kell tölteni 01-el kezdődően és folyamatosan további számozással, valamennyi [ELSZ-T] lapon, amit szeretne benyújtani. (Hibakód=&lt;1092466/M206&gt;)</Msg>
         </Message>
-        <Message id="128" msgLevel="error">
+        <Message id="130" msgLevel="error">
             <CalcId>18500</CalcId>
             <Msg>[IIR] Az [IIR] lap lapszámát ki kell tölteni 01-el kezdődően és folyamatosan további számozással, valamennyi [IIR] lapon, amit szeretne benyújtani. (Hibakód=&lt;1092467/M305&gt;)</Msg>
         </Message>
-        <Message id="129" msgLevel="error">
+        <Message id="131" msgLevel="error">
             <CalcId>18501</CalcId>
             <Msg>[NY-2] Az [NY-2] lap lapszámát ki kell tölteni 01-el kezdődően és folyamatosan további számozással, valamennyi [NY-2] lapon, amit szeretne benyújtani. (Hibakód=&lt;1092464/M080&gt;)</Msg>
         </Message>
-        <Message id="130" msgLevel="error">
+        <Message id="132" msgLevel="error">
             <CalcId>18508</CalcId>
             <Msg>["A magyar forintban kitöltött QDMTT adó összesített adatai: Összeg" mező az [OSSZ] menüpontban]  [OSSZ] "A magyar forintban kitöltött QDMTT adó összesített adatai: Összeg" mező értéke = az [ELSZ-T] menüpontban az "Elismert belföldi kiegészítőadó összege" mezők összege, amelyeknél az "Elismert belföldi kiegészítő adó pénzneme" mezők értéke = HUF. (Hibakód=&lt;M108&gt;)</Msg>
         </Message>
-        <Message id="131" msgLevel="error">
+        <Message id="133" msgLevel="error">
             <CalcId>18509</CalcId>
             <Msg>["A magyar forintban kitöltött IIR adó összesített adatai: Összeg" mező az [OSSZ] menüpontban]  [OSSZ] "A magyar forintban kitöltött IIR adó összesített adatai: Összeg" mező értéke = az [IIR] menüpontban az "IIR adó összege" mezők összege, amelyeknél az "IIR adó pénzneme" mezők értéke = HUF. (Hibakód=&lt;M114&gt;)</Msg>
         </Message>
-        <Message id="132" msgLevel="error">
+        <Message id="134" msgLevel="error">
             <CalcId>18510</CalcId>
             <Msg>["A magyar forintban kitöltött QDMTT adó összesített adatai: Adózók száma" mező az [OSSZ] menüpontban]  [OSSZ] "A magyar forintban kitöltött QDMTT adó összesített adatai: Adózók száma" mező értéke = az [ELSZ-T] menüpontban azon mezők összege, amelyeknél az "Elismert belföldi kiegészítő adó pénzneme" mezők értéke = HUF. (Hibakód=&lt;M111&gt;)</Msg>
         </Message>
-        <Message id="133" msgLevel="error">
+        <Message id="135" msgLevel="error">
             <CalcId>18511</CalcId>
             <Msg>["A magyar forintban kitöltött IIR adó összesített adatai: Adózók száma" mező az [OSSZ] menüpontban]  [OSSZ] "A magyar forintban kitöltött IIR adó összesített adatai: Adózók száma" mező értéke = az [IIR] menüpontban azon mezők összege, amelyeknél az "IIR adó pénzneme" mezők értéke = HUF. (Hibakód=&lt;M117&gt;)</Msg>
         </Message>
-        <Message id="134" msgLevel="error">
+        <Message id="136" msgLevel="error">
             <CalcId>18512</CalcId>
             <Msg>["Az euroban kitöltött QDMTT adó összesített adatai: Összeg" mező az [OSSZ] menüpontban]  [OSSZ] "Az euroban kitöltött QDMTT adó összesített adatai: Összeg" mező értéke = az [ELSZ-T] menüpontban az "Elismert belföldi kiegészítőadó összege" mezők összege, amelyeknél az "Elismert belföldi kiegészítő adó pénzneme" mezők értéke = EUR. (Hibakód=&lt;M109&gt;)</Msg>
         </Message>
-        <Message id="135" msgLevel="error">
+        <Message id="137" msgLevel="error">
             <CalcId>18513</CalcId>
             <Msg>["Az amerikai dollárban kitöltött QDMTT adó összesített adatai: Összeg" mező az [OSSZ] menüpontban]  [OSSZ] "Az amerikai dollárban kitöltött QDMTT adó összesített adatai: Összeg" mező értéke = az [ELSZ-T] menüpontban az "Elismert belföldi kiegészítőadó összege" mezők összege, amelyeknél az "Elismert belföldi kiegészítő adó pénzneme" mezők értéke = USD. (Hibakód=&lt;M110&gt;)</Msg>
         </Message>
-        <Message id="136" msgLevel="error">
+        <Message id="138" msgLevel="error">
             <CalcId>18514</CalcId>
             <Msg>["Az euroban kitöltött QDMTT adó összesített adatai: Adózók száma" mező az [OSSZ] menüpontban]  [OSSZ] "Az euroban kitöltött QDMTT adó összesített adatai: Adózók száma" mező értéke = az [ELSZ-T] menüpontban azon mezők összege, amelyeknél az "Elismert belföldi kiegészítő adó pénzneme" mezők értéke = EUR. (Hibakód=&lt;M112&gt;)</Msg>
         </Message>
-        <Message id="137" msgLevel="error">
+        <Message id="139" msgLevel="error">
             <CalcId>18515</CalcId>
             <Msg>["Az amerikai dollárban kitöltött QDMTT adó összesített adatai: Adózók száma" mező az [OSSZ] menüpontban]  [OSSZ] "Az amerikai dollárban kitöltött QDMTT adó összesített adatai: Adózók száma" mező értéke = az [ELSZ-T] menüpontban azon mezők összege, amelyeknél az "Elismert belföldi kiegészítő adó pénzneme" mezők értéke = USD. (Hibakód=&lt;M113&gt;)</Msg>
         </Message>
-        <Message id="138" msgLevel="error">
+        <Message id="140" msgLevel="error">
             <CalcId>18516</CalcId>
             <Msg>["Az eruoban kitöltött IIR adó összesített adatai: Adózók száma" mező az [OSSZ] menüpontban]  [OSSZ] "Az eruoban kitöltött IIR adó összesített adatai: Adózók száma" mező értéke = az [IIR] menüpontban azon mezők összege, amelyeknél az "IIR adó pénzneme" mezők értéke = EUR. (Hibakód=&lt;M118&gt;)</Msg>
         </Message>
-        <Message id="139" msgLevel="error">
+        <Message id="141" msgLevel="error">
             <CalcId>18517</CalcId>
             <Msg>["Az amerikai dollárban kitöltött IIR adó összesített adatai: Adózók száma" mező az [OSSZ] menüpontban]  [OSSZ] "Az amerikai dollárban kitöltött IIR adó összesített adatai: Adózók száma" mező értéke = az [IIR] menüpontban azon mezők összege, amelyeknél az "IIR adó pénzneme" mezők értéke = USD. (Hibakód=&lt;M119&gt;)</Msg>
         </Message>
-        <Message id="140" msgLevel="error">
+        <Message id="142" msgLevel="error">
             <CalcId>18518</CalcId>
             <Msg>["Az euroban kitöltött IIR adó összesített adatai: Összeg" mező az [OSSZ] menüpontban]  [OSSZ] "Az euroban kitöltött IIR adó összesített adatai: Összeg" mező értéke = az [IIR] menüpontban az "IIR adó összege" mezők összege, amelyeknél az "IIR adó pénzneme" mezők értéke = EUR. (Hibakód=&lt;M115&gt;)</Msg>
         </Message>
-        <Message id="141" msgLevel="error">
+        <Message id="143" msgLevel="error">
             <CalcId>18519</CalcId>
             <Msg>["Az amerikai dollárban kitöltött IIR adó összesített adatai: Összeg" mező az [OSSZ] menüpontban]  [OSSZ] "Az amerikai dollárban kitöltött IIR adó összesített adatai: Összeg" mező értéke = az [IIR] menüpontban az "IIR adó összege" mezők összege, amelyeknél az "IIR adó pénzneme" mezők értéke = USD. (Hibakód=&lt;M116&gt;)</Msg>
         </Message>
-        <Message id="142" msgLevel="error">
+        <Message id="144" msgLevel="error">
             <CalcId>18527</CalcId>
             <Msg>[Főlap] Ha üres a bevallás [IIR] lapja, akkor a Főlapon lévő lapkitöltés kódkocka [IIR lapra vonatkozó jelölése is üres! Fordítva is igaz: ha a Főlapon lévő lapkitöltés kódkocka [IIR] lapra vonatkozó jelölése üres, akkor az [IIR] lap is üres! Ha a lap kitöltött, akkor a lapkitöltés kódkocka értéke a beadott lapoknak megfelelő szám lehet! (Hibakód=&lt;1093073/M037&gt;)</Msg>
         </Message>
-        <Message id="143" msgLevel="error">
+        <Message id="145" msgLevel="error">
             <CalcId>18528</CalcId>
             <Msg>[Főlap] Ha üres a bevallás [ELSZ-T] lapja, akkor a Főlapon lévő lapkitöltés kódkocka [ELSZ-T lapra vonatkozó jelölése is üres! Fordítva is igaz: ha a Főlapon lévő lapkitöltés kódkocka [ELSZ-T] lapra vonatkozó jelölése üres, akkor az [ELSZ-T] lap is üres! Ha a lap kitöltött, akkor a lapkitöltés kódkocka értéke a beadott lapoknak megfelelő szám lehet! (Hibakód=&lt;1093072/M036&gt;)</Msg>
         </Message>
-        <Message id="144" msgLevel="error">
+        <Message id="146" msgLevel="error">
             <CalcId>18529</CalcId>
             <Msg>[Főlap] Ha üres a bevallás [ONELL] lapja, akkor a Főlapon lévő lapkitöltés kódkocka [ONELL] lapra vonatkozó jelölése is üres! Fordítva is igaz: ha a Főlapon lévő lapkitöltés kódkocka [ONELL] lapra vonatkozó jelölése üres, akkor az [ONELL] lap is üres! Ha a lap kitöltött, akkor a lapkitöltés kódkocka értéke 1! (Hibakód=&lt;1093074/M041&gt;)</Msg>
         </Message>
-        <Message id="145" msgLevel="error">
+        <Message id="147" msgLevel="error">
             <CalcId>18530</CalcId>
             <Msg>[Főlap] Ha üres a bevallás [NY-2] lapja, akkor a Főlapon lévő lapkitöltés kódkocka [NY-2] lapra vonatkozó jelölése is üres! Fordítva is igaz: ha a Főlapon lévő lapkitöltés kódkocka [NY-2] lapra vonatkozó jelölése üres, akkor az [NY-2] lap is üres! Ha a lap kitöltött, akkor a lapkitöltés kódkocka értéke a beadott lapoknak megfelelő szám lehet! (Hibakód=&lt;1093070/M034&gt;)</Msg>
         </Message>
-        <Message id="146" msgLevel="error">
+        <Message id="148" msgLevel="error">
             <CalcId>18581</CalcId>
             <Msg>[ELSZ-CS] Az [ELSZ-CS] lap lapszámát ki kell tölteni 01-el kezdődően és folyamatosan további számozással, valamennyi [ELSZ-CS] lapon, amit szeretne benyújtani. (Hibakód=&lt;1092465/M205&gt;)</Msg>
         </Message>
-        <Message id="147" msgLevel="error">
+        <Message id="149" msgLevel="error">
             <CalcId>18615</CalcId>
             <Msg>[Főlap] Ha üres a bevallás [ELSZ-CS] lapja, akkor a Főlapon lévő lapkitöltés kódkocka [ELSZ-CS lapra vonatkozó jelölése is üres! Fordítva is igaz: ha a Főlapon lévő lapkitöltés kódkocka [ELSZ-CS] lapra vonatkozó jelölése üres, akkor az [ELSZ-CS] lap is üres! Ha a lap kitöltött, akkor a lapkitöltés kódkocka értéke a beadott lapoknak megfelelő szám lehet! (Hibakód=&lt;1093071/M035&gt;)</Msg>
         </Message>
-        <Message id="148" msgLevel="error">
+        <Message id="150" msgLevel="error">
             <CalcId>18664</CalcId>
             <Msg>[Főlap] Ha üres a bevallás [NY-1] lapja, akkor a Főlapon lévő lapkitöltés kódkocka [NY-1] lapra vonatkozó jelölése is üres! Fordítva is igaz: ha a Főlapon lévő lapkitöltés kódkocka [NY-1] lapra vonatkozó jelölése üres, akkor az [NY-1] lap is üres! Ha a lap kitöltött, akkor a lapkitöltés kódkocka értéke 1! (Hibakód=&lt;1093069/M033&gt;)</Msg>
         </Message>
-        <Message id="149" msgLevel="warning">
+        <Message id="151" msgLevel="warning">
             <CalcId>100013</CalcId>
             <CalcId>100014</CalcId>
             <CalcId>100015</CalcId>
@@ -2836,7 +2844,7 @@
             </UIPart>
         </SpecDynGroup>
         <SpecDynGroup hasSimpleView="false" id="120299" index="11" name="[QDMTT-ELSZ-T] Elismert belföldi kiegészítőadó kötelezettség (QDMTT adó) és nyilatkozatok /  Qualified domestic minimum top-up tax liability and declarations" sdgType="SPEC_DYNGROUP1">
-            <Detail chainId="120263" maxCount="20">
+            <Detail chainId="120263" maxCount="9999">
                 <fids>0IXXXXD50483A</fids>
                 <fids>0IXXXXD50494A</fids>
                 <fids>0IXXXXD50493A</fids>
@@ -2985,7 +2993,7 @@
             <Value>2</Value>
             <Value>3</Value>
         </ValuesList>
-        <ValuesList id="-386587324" index="12">
+        <ValuesList id="-1814927688" index="12">
             <List>1=adómentesség választás a 32. § (1) bekezdése alapján / Exemption option pursuant to Section 32 (1) of the Global Minimum Tax Act</List>
             <List>2=adómentesség választás a 32. § (2) a) bekezdése alapján / Exemption option pursuant to Section 32 (2) a) of the Global Minimum Tax Act</List>
             <List>3=adómentesség választás a 32. § (2) b) bekezdése alapján / Exemption option pursuant to Section 32 (2) b) of the Global Minimum Tax Act</List>
@@ -2993,6 +3001,7 @@
             <List>5=kiegészítő adó alóli kivétel a 32. § (3) bekezdése alapján / Exemption from supplementary tax pursuant to Section 32 (3) of the Global Minimum Tax Act</List>
             <List>6=kizárás okán mentes a 47. § (1) bekezdése alapján / Exemption due to exclusion pursuant to Section 47 (1) of the Global Minimum Tax Act</List>
             <List>7=egyéb okból mentes / Exemption for other reasons</List>
+            <List>8=több okból mentes / Exempt for multiple reasons</List>
             <Value>1</Value>
             <Value>2</Value>
             <Value>3</Value>
@@ -3000,6 +3009,7 @@
             <Value>5</Value>
             <Value>6</Value>
             <Value>7</Value>
+            <Value>8</Value>
         </ValuesList>
     </Form>
 </WebUIModel>

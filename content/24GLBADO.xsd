@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         xmlns:meta="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
-        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/24GLBADO/6.0"
+        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/24GLBADO/8.0"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/24GLBADO/6.0">
+        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/24GLBADO/8.0">
    <import namespace="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
            schemaLocation="form_xsd_metaschema.xsd"/>
    <element name="Doc_24GLBADO"
@@ -14,6 +14,22 @@
          <documentation>Bevallás a 2024. évi kiegészítő adókról és az elismert belföldi kiegészítőadó-előlegről a Magyarországon illetőséggel rendelkező adóalanyok részére / Tax return on the qualified minimum domestic top-up tax advance payment of FY2024 for domestic constituent entites or for the designated local entity acting on behalf of the domestic constituent entities</documentation>
       </annotation>
    </element>
+   <complexType name="Doc_24GLBADO_Type">
+      <annotation>
+         <documentation>A teljes bizonylat szerkezetet leíró típus</documentation>
+      </annotation>
+      <sequence>
+         <element name="Form_24GLBADO"
+                  type="tns:Form_24GLBADO_Type"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  meta:metaType="FormMetaType">
+            <annotation>
+               <documentation>24GLBADO részbizonylat</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
    <simpleType name="Enum_24GLBADO_0A0001D007A">
       <annotation>
          <documentation>Enum értékek </documentation>
@@ -66,160 +82,6 @@
          <enumeration value="7"/>
       </restriction>
    </simpleType>
-   <simpleType name="Enum_24GLBADO_0A0001D00505A">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0DXXXXC0001DA">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="HUF"/>
-         <enumeration value="EUR"/>
-         <enumeration value="USD"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0DXXXXC0001EA">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-         <enumeration value="4"/>
-         <enumeration value="5"/>
-         <enumeration value="6"/>
-         <enumeration value="7"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0DXXXXC0005DA">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="HUF"/>
-         <enumeration value="EUR"/>
-         <enumeration value="USD"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0DXXXXC0005EA">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-         <enumeration value="4"/>
-         <enumeration value="5"/>
-         <enumeration value="6"/>
-         <enumeration value="7"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0DXXXXC0004DA">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="HUF"/>
-         <enumeration value="EUR"/>
-         <enumeration value="USD"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0DXXXXC0004EA">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-         <enumeration value="4"/>
-         <enumeration value="5"/>
-         <enumeration value="6"/>
-         <enumeration value="7"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0DXXXXC0003DA">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="HUF"/>
-         <enumeration value="EUR"/>
-         <enumeration value="USD"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0DXXXXC0003EA">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-         <enumeration value="4"/>
-         <enumeration value="5"/>
-         <enumeration value="6"/>
-         <enumeration value="7"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0DXXXXC0002DA">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="HUF"/>
-         <enumeration value="EUR"/>
-         <enumeration value="USD"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0DXXXXC0002EA">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-         <enumeration value="4"/>
-         <enumeration value="5"/>
-         <enumeration value="6"/>
-         <enumeration value="7"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0DXXXXC0006DA">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="HUF"/>
-         <enumeration value="EUR"/>
-         <enumeration value="USD"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0DXXXXC0006EA">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-         <enumeration value="4"/>
-         <enumeration value="5"/>
-         <enumeration value="6"/>
-         <enumeration value="7"/>
-      </restriction>
-   </simpleType>
    <simpleType name="Enum_24GLBADO_0F0001C50337A">
       <annotation>
          <documentation>Enum értékek </documentation>
@@ -231,55 +93,12 @@
          <enumeration value="4"/>
       </restriction>
    </simpleType>
-   <simpleType name="Enum_24GLBADO_0F0001C50420A">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-      </restriction>
-   </simpleType>
    <simpleType name="Enum_24GLBADO_0HXXXXC50484A">
       <annotation>
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
          <enumeration value="X"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0HXXXXC50488A">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-         <enumeration value="4"/>
-         <enumeration value="5"/>
-         <enumeration value="6"/>
-         <enumeration value="7"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0IXXXXD50491A">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="HUF"/>
-         <enumeration value="EUR"/>
-         <enumeration value="USD"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0IXXXXD50498A">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="HUF"/>
-         <enumeration value="EUR"/>
-         <enumeration value="USD"/>
       </restriction>
    </simpleType>
    <simpleType name="Enum_24GLBADO_0IXXXXD50482A">
@@ -295,34 +114,6 @@
          <enumeration value="6"/>
       </restriction>
    </simpleType>
-   <simpleType name="Enum_24GLBADO_0IXXXXD50483A">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0IXXXXC50481A">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="X"/>
-      </restriction>
-   </simpleType>
-   <simpleType name="Enum_24GLBADO_0JXXXXC50442A">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="HUF"/>
-         <enumeration value="EUR"/>
-         <enumeration value="USD"/>
-      </restriction>
-   </simpleType>
    <simpleType name="Enum_24GLBADO_0JXXXXC50454A">
       <annotation>
          <documentation>Enum értékek </documentation>
@@ -335,34 +126,9 @@
          <enumeration value="5"/>
          <enumeration value="6"/>
          <enumeration value="7"/>
+         <enumeration value="8"/>
       </restriction>
    </simpleType>
-   <simpleType name="Enum_24GLBADO_0JXXXXC50430A">
-      <annotation>
-         <documentation>Enum értékek </documentation>
-      </annotation>
-      <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-      </restriction>
-   </simpleType>
-   <complexType name="Doc_24GLBADO_Type">
-      <annotation>
-         <documentation>A teljes bizonylat szerkezetet leíró típus</documentation>
-      </annotation>
-      <sequence>
-         <element name="Form_24GLBADO"
-                  type="tns:Form_24GLBADO_Type"
-                  minOccurs="1"
-                  maxOccurs="1"
-                  meta:metaType="FormMetaType">
-            <annotation>
-               <documentation>24GLBADO részbizonylat</documentation>
-            </annotation>
-         </element>
-      </sequence>
-   </complexType>
    <simpleType name="Enum_24GLBADO_GLBADO_deviza_1">
       <annotation>
          <documentation>Enum értékek GLBADO_deviza mátrix 1. oszlopból.</documentation>
@@ -1179,7 +945,7 @@
          <documentation>[QDMTT-ELSZ-T] Csoporttagra vonatkozó további adatok / Additional data for the constituent entity</documentation>
       </annotation>
       <sequence>
-         <element name="Chain_elem" minOccurs="0" maxOccurs="20">
+         <element name="Chain_elem" minOccurs="0" maxOccurs="9999">
             <annotation>
                <documentation>Lánc ismétlődő elemei</documentation>
             </annotation>
@@ -2318,10 +2084,9 @@
                <documentation>Tényleges adómérték (%) / Effective tax rate ([ELSZ_CS]A4)</documentation>
             </annotation>
             <simpleType>
-               <restriction base="string">
-                  <minLength value="1"/>
-                  <maxLength value="8"/>
-                  <pattern value="[0-9,.]+"/>
+               <restriction base="decimal">
+                  <totalDigits value="8"/>
+                  <fractionDigits value="4"/>
                </restriction>
             </simpleType>
          </element>
@@ -2634,7 +2399,7 @@
          </element>
          <element name="Field_0JXXXXC50454A"
                   minOccurs="0"
-                  type="tns:Enum_24GLBADO_29928"
+                  type="tns:Enum_24GLBADO_0JXXXXC50454A"
                   meta:metaType="FieldMetaType">
             <annotation>
                <documentation>Mentességi nyilatkozat / Declaration of exemption ([IIR]A8)</documentation>

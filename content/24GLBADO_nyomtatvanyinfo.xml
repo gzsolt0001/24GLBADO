@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Nyomtatvanyinfo xmlns="https://soap.api.nav.gov.hu/external/webnyk/nyomtatvanyinfo/1.0" version="6.0">
+<Nyomtatvanyinfo xmlns="https://soap.api.nav.gov.hu/external/webnyk/nyomtatvanyinfo/1.0" version="8.0">
     <BoritekParameter>
         <Kulcs>idoszakig</Kulcs>
-        <Ertek>//Block_120050/FieldGroup_120077/Field_0A0001D002A</Ertek>
+        <Ertek>replace(//Block_120050/FieldGroup_120077/Field_0A0001D002A, '-', '')</Ertek>
     </BoritekParameter>
     <BoritekParameter>
         <Kulcs>adoszam</Kulcs>
@@ -14,7 +14,7 @@
     </BoritekParameter>
     <BoritekParameter>
         <Kulcs>idoszaktol</Kulcs>
-        <Ertek>//Block_120050/FieldGroup_120077/Field_0A0001D001A</Ertek>
+        <Ertek>replace(//Block_120050/FieldGroup_120077/Field_0A0001D001A, '-', '')</Ertek>
     </BoritekParameter>
     <Nyomtatvanyinformacio>
         <Adozo>

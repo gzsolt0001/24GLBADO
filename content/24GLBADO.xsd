@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         xmlns:meta="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
-        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/24GLBADO/8.0"
+        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/24GLBADO/8.0.0"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/24GLBADO/8.0">
+        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/24GLBADO/8.0.0">
    <import namespace="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
            schemaLocation="form_xsd_metaschema.xsd"/>
    <element name="Doc_24GLBADO"
@@ -35,8 +35,16 @@
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
+         <enumeration value="1">
+            <annotation>
+               <documentation>1=Belföldi csoporttag / Constituent entity</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="2">
+            <annotation>
+               <documentation>2=Összes belföldi csoporttag nevében eljáró kijelölt helyi szervezet / Designated local entity </documentation>
+            </annotation>
+         </enumeration>
       </restriction>
    </simpleType>
    <simpleType name="Enum_24GLBADO_0A0001D006A">
@@ -44,8 +52,16 @@
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
-         <enumeration value="H"/>
-         <enumeration value="O"/>
+         <enumeration value="H">
+            <annotation>
+               <documentation>H=adózói javítás (helyesbítés) / Taxpayer correction (adjustment)</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="O">
+            <annotation>
+               <documentation>O=önellenőrzés / Self-audit</documentation>
+            </annotation>
+         </enumeration>
       </restriction>
    </simpleType>
    <simpleType name="Enum_24GLBADO_0A0001D008A">
@@ -53,9 +69,21 @@
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
+         <enumeration value="1">
+            <annotation>
+               <documentation>1=A GloBE tv. 11 § (13) bekezdés d) pontja alapján a fizetési kötelezettség az összes belföldi csoporttag nevében eljáró kijelölt helyi szervezetet terheli / Pursuant to Section 11 (13) d) of the GloBE Act, the payment obligation is borne by the designated local entity acting on behalf of the constituent entities</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="2">
+            <annotation>
+               <documentation>2=A GloBE tv. 11 § (13) bekezdés c) pontja alapján a fizetési kötelezettség más csoporttagokat terhel / Pursuant to Section 11 (13) c) of the GloBE Act., the payment obligation is borne by other constituent entity</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="3">
+            <annotation>
+               <documentation>3=A fizetési kötelezettség a GloBE tv. 11. § (13) bekezdés c) pontja alapján áll fent / The payment obligation exists on the basis of Section 11 (13) c) of the GloBE Act</documentation>
+            </annotation>
+         </enumeration>
       </restriction>
    </simpleType>
    <simpleType name="Enum_24GLBADO_29927">
@@ -63,9 +91,21 @@
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
-         <enumeration value="HUF"/>
-         <enumeration value="EUR"/>
-         <enumeration value="USD"/>
+         <enumeration value="HUF">
+            <annotation>
+               <documentation>HUF=HUF - magyar forint (ezer forintban) / Hungarian forint (in thousands of forints)</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="EUR">
+            <annotation>
+               <documentation>EUR=EUR - euro / euro</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="USD">
+            <annotation>
+               <documentation>USD=USD - amerikai dollár / American dollar</documentation>
+            </annotation>
+         </enumeration>
       </restriction>
    </simpleType>
    <simpleType name="Enum_24GLBADO_29928">
@@ -73,13 +113,41 @@
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-         <enumeration value="4"/>
-         <enumeration value="5"/>
-         <enumeration value="6"/>
-         <enumeration value="7"/>
+         <enumeration value="1">
+            <annotation>
+               <documentation>1=adómentesség választás a 32. § (1) bekezdése alapján / Exemption option pursuant to Section 32 (1) of the Global Minimum Tax Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="2">
+            <annotation>
+               <documentation>2=adómentesség választás a 32. § (2) a) bekezdése alapján / Exemption option pursuant to Section 32 (2) a) of the Global Minimum Tax Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="3">
+            <annotation>
+               <documentation>3=adómentesség választás a 32. § (2) b) bekezdése alapján / Exemption option pursuant to Section 32 (2) b) of the Global Minimum Tax Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="4">
+            <annotation>
+               <documentation>4=adómentesség választás a 32. § (2) c) bekezdése alapján / Exemption option pursuant to Section 32 (2) c) of the Global Minimum Tax Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="5">
+            <annotation>
+               <documentation>5=kiegészítő adó alóli kivétel a 30. § (1) bekezdése alapján / Exemption from supplementary tax pursuant to Section 30 (1) of the Global Minimum Tax Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="6">
+            <annotation>
+               <documentation>6=kizárás okán mentes a 47. § (11) bekezdése alapján / Exemption due to exclusion pursuant to Section 47 (11) of the Global Minimum Tax Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="7">
+            <annotation>
+               <documentation>7=egyéb okból mentes / Exemption for other reasons</documentation>
+            </annotation>
+         </enumeration>
       </restriction>
    </simpleType>
    <simpleType name="Enum_24GLBADO_0F0001C50337A">
@@ -87,10 +155,26 @@
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-         <enumeration value="4"/>
+         <enumeration value="1">
+            <annotation>
+               <documentation>1=Számvitelről szóló törvény III. fejezetének megfelelő szabályok / Rules accordance with Chapter III of the Accounting Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="2">
+            <annotation>
+               <documentation>2=IFRS / IFRS</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="3">
+            <annotation>
+               <documentation>3=Egyéb / Other</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="4">
+            <annotation>
+               <documentation>4=Számvitelről szóló törvény III. fejezetének megfelelő szabályok és IFRS / Rules accordance with Chapter III of the Accounting Act and IFRS</documentation>
+            </annotation>
+         </enumeration>
       </restriction>
    </simpleType>
    <simpleType name="Enum_24GLBADO_0HXXXXC50484A">
@@ -98,7 +182,11 @@
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
-         <enumeration value="X"/>
+         <enumeration value="X">
+            <annotation>
+               <documentation>X=Vállalatcsoporton belüli külön alcsoportba nem tartozó csoporttagot kívánok feltüntetni / I wish to list a constituent entity without separate subgroup within the entity group</documentation>
+            </annotation>
+         </enumeration>
       </restriction>
    </simpleType>
    <simpleType name="Enum_24GLBADO_0IXXXXD50482A">
@@ -106,12 +194,36 @@
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-         <enumeration value="4"/>
-         <enumeration value="5"/>
-         <enumeration value="6"/>
+         <enumeration value="1">
+            <annotation>
+               <documentation>1=Közös vállalkozás / Joint venture</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="2">
+            <annotation>
+               <documentation>2=Közös vállalkozás kapcsolt vállalkozása / Joint venture affiliate</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="3">
+            <annotation>
+               <documentation>3=Kisebbségi tulajdonban levő anyavállalat / Minority-owned parent entity</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="4">
+            <annotation>
+               <documentation>4=Kisebbségi tulajdonban levő leányvállalat / Minority-owned subsidiary</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="5">
+            <annotation>
+               <documentation>5=Kisebbségi tulajdonban levő csoporttag / Minority-owned constituent entity</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="6">
+            <annotation>
+               <documentation>6=Egyéb csoporttag típus / Other group member type</documentation>
+            </annotation>
+         </enumeration>
       </restriction>
    </simpleType>
    <simpleType name="Enum_24GLBADO_0JXXXXC50454A">
@@ -119,14 +231,46 @@
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
-         <enumeration value="1"/>
-         <enumeration value="2"/>
-         <enumeration value="3"/>
-         <enumeration value="4"/>
-         <enumeration value="5"/>
-         <enumeration value="6"/>
-         <enumeration value="7"/>
-         <enumeration value="8"/>
+         <enumeration value="1">
+            <annotation>
+               <documentation>1=adómentesség választás a 32. § (1) bekezdése alapján / Exemption option pursuant to Section 32 (1) of the Global Minimum Tax Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="2">
+            <annotation>
+               <documentation>2=adómentesség választás a 32. § (2) a) bekezdése alapján / Exemption option pursuant to Section 32 (2) a) of the Global Minimum Tax Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="3">
+            <annotation>
+               <documentation>3=adómentesség választás a 32. § (2) b) bekezdése alapján / Exemption option pursuant to Section 32 (2) b) of the Global Minimum Tax Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="4">
+            <annotation>
+               <documentation>4=adómentesség választás a 32. § (2) c) bekezdése alapján / Exemption option pursuant to Section 32 (2) c) of the Global Minimum Tax Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="5">
+            <annotation>
+               <documentation>5=kiegészítő adó alóli kivétel a 32. § (3) bekezdése alapján / Exemption from supplementary tax pursuant to Section 32 (3) of the Global Minimum Tax Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="6">
+            <annotation>
+               <documentation>6=kizárás okán mentes a 47. § (1) bekezdése alapján / Exemption due to exclusion pursuant to Section 47 (1) of the Global Minimum Tax Act</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="7">
+            <annotation>
+               <documentation>7=egyéb okból mentes / Exemption for other reasons</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="8">
+            <annotation>
+               <documentation>8=több okból mentes / Exempt for multiple reasons</documentation>
+            </annotation>
+         </enumeration>
       </restriction>
    </simpleType>
    <simpleType name="Enum_24GLBADO_GLBADO_deviza_1">
@@ -1031,7 +1175,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -1052,7 +1196,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -1066,7 +1210,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="40"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -1181,7 +1325,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>ANYA (FlapANYA)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ ANYA (FlapANYA)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1195,7 +1339,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>OSSZ (FlapOSSZ)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ OSSZ (FlapOSSZ)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1209,7 +1353,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>NY-1 (FlapNY1)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ NY-1 (FlapNY1)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1223,7 +1367,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>NY-2 (FlapNY2)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ NY-2 (FlapNY2)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1237,7 +1381,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>ELO (FlapELO)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ ELO (FlapELO)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1251,7 +1395,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>ELSZ-CS (FlapELSZCS)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ ELSZ-CS (FlapELSZCS)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1265,7 +1409,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>ELSZ-T (FlapELSZT)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ ELSZ-T (FlapELSZT)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1279,7 +1423,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>IIR (FlapIIR)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ IIR (FlapIIR)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1293,7 +1437,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>ONELL (FlapONELL)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ ONELL (FlapONELL)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1328,7 +1472,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -1375,7 +1519,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-QDMTT-ELO] Az elismert belföldi kiegészítőadó-előleg (QDMTT adóelőleg) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax advance payment, broken down by currency ¦ 01. A magyar forintban kitöltött QDMTT adóelőleg összesített adatai / Aggregated data of qualified domestic minimum top-up tax advance payment completed in Hungarian forints (Adónemkód / Tax type code: 422) ¦ Összeg / Amount ([OSSZ]A1)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-QDMTT-ELO] Az elismert belföldi kiegészítőadó-előleg (QDMTT adóelőleg) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax advance payment, broken down by currency ¦ 01. A magyar forintban kitöltött QDMTT adóelőleg összesített adatai / Aggregated data of qualified domestic minimum top-up tax advance payment completed in Hungarian forints (Adónemkód / Tax type code: 422) ¦ Összeg / Amount ([OSSZ]A1)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1389,7 +1533,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-QDMTT-ELO] Az elismert belföldi kiegészítőadó-előleg (QDMTT adóelőleg) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax advance payment, broken down by currency ¦ 01. A magyar forintban kitöltött QDMTT adóelőleg összesített adatai / Aggregated data of qualified domestic minimum top-up tax advance payment completed in Hungarian forints (Adónemkód / Tax type code: 422) ¦ Adózók száma / Number of taxpayers ([OSSZ]B1)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-QDMTT-ELO] Az elismert belföldi kiegészítőadó-előleg (QDMTT adóelőleg) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax advance payment, broken down by currency ¦ 01. A magyar forintban kitöltött QDMTT adóelőleg összesített adatai / Aggregated data of qualified domestic minimum top-up tax advance payment completed in Hungarian forints (Adónemkód / Tax type code: 422) ¦ Adózók száma / Number of taxpayers ([OSSZ]B1)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1403,7 +1547,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-QDMTT-ELO] Az elismert belföldi kiegészítőadó-előleg (QDMTT adóelőleg) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax advance payment, broken down by currency ¦ 02. Az euroban kitöltött QDMTT adóelőleg összesített adatai / Aggregated data of qualified domestic minimum top-up tax advance payment completed in Euros (Adónemkód / Tax type code: 496) ¦ Összeg / Amount ([OSSZ]A2)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-QDMTT-ELO] Az elismert belföldi kiegészítőadó-előleg (QDMTT adóelőleg) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax advance payment, broken down by currency ¦ 02. Az euroban kitöltött QDMTT adóelőleg összesített adatai / Aggregated data of qualified domestic minimum top-up tax advance payment completed in Euros (Adónemkód / Tax type code: 496) ¦ Összeg / Amount ([OSSZ]A2)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1417,7 +1561,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-QDMTT-ELO] Az elismert belföldi kiegészítőadó-előleg (QDMTT adóelőleg) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax advance payment, broken down by currency ¦ 02. Az euroban kitöltött QDMTT adóelőleg összesített adatai / Aggregated data of qualified domestic minimum top-up tax advance payment completed in Euros (Adónemkód / Tax type code: 496) ¦ Adózók száma / Number of taxpayers ([OSSZ]B2)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-QDMTT-ELO] Az elismert belföldi kiegészítőadó-előleg (QDMTT adóelőleg) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax advance payment, broken down by currency ¦ 02. Az euroban kitöltött QDMTT adóelőleg összesített adatai / Aggregated data of qualified domestic minimum top-up tax advance payment completed in Euros (Adónemkód / Tax type code: 496) ¦ Adózók száma / Number of taxpayers ([OSSZ]B2)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1431,7 +1575,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-QDMTT-ELO] Az elismert belföldi kiegészítőadó-előleg (QDMTT adóelőleg) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax advance payment, broken down by currency ¦ 03. Az amerikai dollárban kitöltött QDMTT adóelőleg összesített adatai / Aggregated data of qualified domestic minimum top-up tax advance payment completed in US dollars (Adónemkód / Tax type code: 497) ¦ Összeg / Amount ([OSSZ]A3)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-QDMTT-ELO] Az elismert belföldi kiegészítőadó-előleg (QDMTT adóelőleg) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax advance payment, broken down by currency ¦ 03. Az amerikai dollárban kitöltött QDMTT adóelőleg összesített adatai / Aggregated data of qualified domestic minimum top-up tax advance payment completed in US dollars (Adónemkód / Tax type code: 497) ¦ Összeg / Amount ([OSSZ]A3)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1445,7 +1589,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-QDMTT-ELO] Az elismert belföldi kiegészítőadó-előleg (QDMTT adóelőleg) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax advance payment, broken down by currency ¦ 03. Az amerikai dollárban kitöltött QDMTT adóelőleg összesített adatai / Aggregated data of qualified domestic minimum top-up tax advance payment completed in US dollars (Adónemkód / Tax type code: 497) ¦ Adózók száma / Number of taxpayers ([OSSZ]B3)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-QDMTT-ELO] Az elismert belföldi kiegészítőadó-előleg (QDMTT adóelőleg) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax advance payment, broken down by currency ¦ 03. Az amerikai dollárban kitöltött QDMTT adóelőleg összesített adatai / Aggregated data of qualified domestic minimum top-up tax advance payment completed in US dollars (Adónemkód / Tax type code: 497) ¦ Adózók száma / Number of taxpayers ([OSSZ]B3)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1459,7 +1603,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-QDMTT-ELSZ] Az elismert belföldi kiegészítőadó (QDMTT adó) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax (QDMTT), broken down by currency ¦ 11. A magyar forintban kitöltött QDMTT adó összesített adatai / Aggregated data of qualified domestic minimum top-up tax completed in Hungarian forints (Adónemkód / Tax type code: 422) ¦ Összeg / Amount ([OSSZ]A11)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-QDMTT-ELSZ] Az elismert belföldi kiegészítőadó (QDMTT adó) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax (QDMTT), broken down by currency ¦ 11. A magyar forintban kitöltött QDMTT adó összesített adatai / Aggregated data of qualified domestic minimum top-up tax completed in Hungarian forints (Adónemkód / Tax type code: 422) ¦ Összeg / Amount ([OSSZ]A11)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1473,7 +1617,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-QDMTT-ELSZ] Az elismert belföldi kiegészítőadó (QDMTT adó) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax (QDMTT), broken down by currency ¦ 11. A magyar forintban kitöltött QDMTT adó összesített adatai / Aggregated data of qualified domestic minimum top-up tax completed in Hungarian forints (Adónemkód / Tax type code: 422) ¦ Adózók száma / Number of taxpayers ([OSSZ]B11)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-QDMTT-ELSZ] Az elismert belföldi kiegészítőadó (QDMTT adó) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax (QDMTT), broken down by currency ¦ 11. A magyar forintban kitöltött QDMTT adó összesített adatai / Aggregated data of qualified domestic minimum top-up tax completed in Hungarian forints (Adónemkód / Tax type code: 422) ¦ Adózók száma / Number of taxpayers ([OSSZ]B11)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1487,7 +1631,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-QDMTT-ELSZ] Az elismert belföldi kiegészítőadó (QDMTT adó) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax (QDMTT), broken down by currency ¦ 12. Az euroban kitöltött QDMTT adó összesített adatai / Aggregated data of qualified domestic minimum top-up tax tax completed in Euros (Adónemkód / Tax type code: 496) ¦ Összeg / Amount ([OSSZ]A12)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-QDMTT-ELSZ] Az elismert belföldi kiegészítőadó (QDMTT adó) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax (QDMTT), broken down by currency ¦ 12. Az euroban kitöltött QDMTT adó összesített adatai / Aggregated data of qualified domestic minimum top-up tax tax completed in Euros (Adónemkód / Tax type code: 496) ¦ Összeg / Amount ([OSSZ]A12)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1501,7 +1645,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-QDMTT-ELSZ] Az elismert belföldi kiegészítőadó (QDMTT adó) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax (QDMTT), broken down by currency ¦ 12. Az euroban kitöltött QDMTT adó összesített adatai / Aggregated data of qualified domestic minimum top-up tax tax completed in Euros (Adónemkód / Tax type code: 496) ¦ Adózók száma / Number of taxpayers ([OSSZ]B12)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-QDMTT-ELSZ] Az elismert belföldi kiegészítőadó (QDMTT adó) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax (QDMTT), broken down by currency ¦ 12. Az euroban kitöltött QDMTT adó összesített adatai / Aggregated data of qualified domestic minimum top-up tax tax completed in Euros (Adónemkód / Tax type code: 496) ¦ Adózók száma / Number of taxpayers ([OSSZ]B12)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1515,7 +1659,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-QDMTT-ELSZ] Az elismert belföldi kiegészítőadó (QDMTT adó) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax (QDMTT), broken down by currency ¦ 13. Az amerikai dollárban kitöltött QDMTT adó összesített adatai / Aggregated data of qualified domestic minimum top-up tax completed in US dollars (Adónemkód / Tax type code: 497) ¦ Összeg / Amount ([OSSZ]A13)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-QDMTT-ELSZ] Az elismert belföldi kiegészítőadó (QDMTT adó) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax (QDMTT), broken down by currency ¦ 13. Az amerikai dollárban kitöltött QDMTT adó összesített adatai / Aggregated data of qualified domestic minimum top-up tax completed in US dollars (Adónemkód / Tax type code: 497) ¦ Összeg / Amount ([OSSZ]A13)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1529,7 +1673,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-QDMTT-ELSZ] Az elismert belföldi kiegészítőadó (QDMTT adó) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax (QDMTT), broken down by currency ¦ 13. Az amerikai dollárban kitöltött QDMTT adó összesített adatai / Aggregated data of qualified domestic minimum top-up tax completed in US dollars (Adónemkód / Tax type code: 497) ¦ Adózók száma / Number of taxpayers ([OSSZ]B13)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-QDMTT-ELSZ] Az elismert belföldi kiegészítőadó (QDMTT adó) összesített adatai devizanemenkénti bontásban / Aggregated data of qualified domestic minimum top-up tax (QDMTT), broken down by currency ¦ 13. Az amerikai dollárban kitöltött QDMTT adó összesített adatai / Aggregated data of qualified domestic minimum top-up tax completed in US dollars (Adónemkód / Tax type code: 497) ¦ Adózók száma / Number of taxpayers ([OSSZ]B13)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1543,7 +1687,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-IIR] Az IIR adó összesített adatai devizanemenkénti bontásban / Aggregated data of IIR tax, broken down by currency ¦ 21. A magyar forintban kitöltött IIR adó összesített adatai / Aggregated data of IIR tax completed in Hungarian forints (Adónemkód / Tax type code: 422) ¦ Összeg / Amount ([OSSZ]A21)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-IIR] Az IIR adó összesített adatai devizanemenkénti bontásban / Aggregated data of IIR tax, broken down by currency ¦ 21. A magyar forintban kitöltött IIR adó összesített adatai / Aggregated data of IIR tax completed in Hungarian forints (Adónemkód / Tax type code: 422) ¦ Összeg / Amount ([OSSZ]A21)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1557,7 +1701,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-IIR] Az IIR adó összesített adatai devizanemenkénti bontásban / Aggregated data of IIR tax, broken down by currency ¦ 21. A magyar forintban kitöltött IIR adó összesített adatai / Aggregated data of IIR tax completed in Hungarian forints (Adónemkód / Tax type code: 422) ¦ Adózók száma / Number of taxpayers ([OSSZ]B21)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-IIR] Az IIR adó összesített adatai devizanemenkénti bontásban / Aggregated data of IIR tax, broken down by currency ¦ 21. A magyar forintban kitöltött IIR adó összesített adatai / Aggregated data of IIR tax completed in Hungarian forints (Adónemkód / Tax type code: 422) ¦ Adózók száma / Number of taxpayers ([OSSZ]B21)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1571,7 +1715,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-IIR] Az IIR adó összesített adatai devizanemenkénti bontásban / Aggregated data of IIR tax, broken down by currency ¦ 22. Az euroban kitöltött IIR adó összesített adatai / Aggregated data of IIR tax completed in Euros (Adónemkód / Tax type code: 496) ¦ Összeg / Amount ([OSSZ]A22)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-IIR] Az IIR adó összesített adatai devizanemenkénti bontásban / Aggregated data of IIR tax, broken down by currency ¦ 22. Az euroban kitöltött IIR adó összesített adatai / Aggregated data of IIR tax completed in Euros (Adónemkód / Tax type code: 496) ¦ Összeg / Amount ([OSSZ]A22)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1585,7 +1729,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-IIR] Az IIR adó összesített adatai devizanemenkénti bontásban / Aggregated data of IIR tax, broken down by currency ¦ 22. Az euroban kitöltött IIR adó összesített adatai / Aggregated data of IIR tax completed in Euros (Adónemkód / Tax type code: 496) ¦ Adózók száma / Number of taxpayers ([OSSZ]B22)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-IIR] Az IIR adó összesített adatai devizanemenkénti bontásban / Aggregated data of IIR tax, broken down by currency ¦ 22. Az euroban kitöltött IIR adó összesített adatai / Aggregated data of IIR tax completed in Euros (Adónemkód / Tax type code: 496) ¦ Adózók száma / Number of taxpayers ([OSSZ]B22)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1599,7 +1743,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-IIR] Az IIR adó összesített adatai devizanemenkénti bontásban / Aggregated data of IIR tax, broken down by currency ¦ 23. Az amerikai dollárban kitöltött IIR adó összesített adatai / Aggregated data of IIR tax completed in US dollars (Adónemkód / Tax type code: 497) ¦ Összeg / Amount ([OSSZ]A23)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-IIR] Az IIR adó összesített adatai devizanemenkénti bontásban / Aggregated data of IIR tax, broken down by currency ¦ 23. Az amerikai dollárban kitöltött IIR adó összesített adatai / Aggregated data of IIR tax completed in US dollars (Adónemkód / Tax type code: 497) ¦ Összeg / Amount ([OSSZ]A23)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1613,7 +1757,7 @@
                   minOccurs="0"
                   meta:metaType="FieldMetaType">
             <annotation>
-               <documentation>[OSSZ-IIR] Az IIR adó összesített adatai devizanemenkénti bontásban / Aggregated data of IIR tax, broken down by currency ¦ 23. Az amerikai dollárban kitöltött IIR adó összesített adatai / Aggregated data of IIR tax completed in US dollars (Adónemkód / Tax type code: 497) ¦ Adózók száma / Number of taxpayers ([OSSZ]B23)</documentation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ [OSSZ-IIR] Az IIR adó összesített adatai devizanemenkénti bontásban / Aggregated data of IIR tax, broken down by currency ¦ 23. Az amerikai dollárban kitöltött IIR adó összesített adatai / Aggregated data of IIR tax completed in US dollars (Adónemkód / Tax type code: 497) ¦ Adózók száma / Number of taxpayers ([OSSZ]B23)</documentation>
             </annotation>
             <simpleType>
                <restriction base="string">
@@ -1907,7 +2051,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -1921,7 +2065,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -1950,7 +2094,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -1972,7 +2116,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -2007,7 +2151,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -2166,7 +2310,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -2347,7 +2491,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
